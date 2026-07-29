@@ -13,7 +13,7 @@ cd pla-fea-autoresearch
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install -e ".[dev]"
-pytest -m "not integration"
+pytest -m "not integration and not external_assets"
 ```
 
 CalculiX is required for production FEA runs. Gmsh and MeshIO are available
@@ -55,12 +55,18 @@ already appeared elsewhere.
 2. Keep published evidence, simulated evidence, and measurements in separate
    files.
 3. Add tests for changed behavior.
-4. Run `pytest -m "not integration"` before opening a pull request.
+4. Run `pytest -m "not integration and not external_assets"` before opening
+   a pull request.
 5. Describe assumptions, solver/version details, and any known failure modes.
 
 Large solver runs, generated meshes, papers, workbooks, and G-code are ignored.
 Publish large reproducibility artifacts in an archival data repository and
 link them with checksums instead of committing them to Git.
+
+Tests marked `external_assets` verify downloaded source snapshots or generated
+research artifacts that are intentionally absent from a clean clone. After
+fetching or regenerating the referenced assets, run the full non-solver suite
+with `pytest -m "not integration"`.
 
 By contributing code, you agree that it may be distributed under the MIT
 License. Data and third-party material retain their stated licenses.

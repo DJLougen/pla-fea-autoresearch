@@ -87,6 +87,16 @@ source .venv/bin/activate
 python -m pip install -e ".[dev]"
 ```
 
+Run the clean-clone test suite with:
+
+```bash
+pytest -m "not integration and not external_assets"
+```
+
+`external_assets` tests recheck downloaded publications, source workbooks, or
+generated research artifacts. They are available after those checksum-pinned
+assets have been fetched or regenerated.
+
 Install CalculiX separately and confirm that `ccx` is on `PATH`:
 
 ```bash

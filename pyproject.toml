@@ -49,5 +49,6 @@ packages = ["src"]
 testpaths = ["tests"]
 markers = [
   "integration: requires an installed CalculiX executable",
+  "external_assets: requires excluded source snapshots or generated research artifacts",
 ]
 addopts = "-ra"

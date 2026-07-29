@@ -179,7 +179,103 @@ def pattern_occupancy(
                 np.argsort(candidate_scores, kind="stable")[:missing]
             ]
             occupancy.ravel()[selected] = True
+    occupancy = _repair_missing_face_spans(occupancy, score, count)
     return occupancy
+
+
+def _spans_all_domain_faces(occupancy: np.ndarray) -> bool:
+    """Return whether solid voxels reach both faces of every axis."""
+    return all(
+        bool(np.take(occupancy, 0, axis=axis).any())
+        and bool(np.take(occupancy, -1, axis=axis).any())
+        for axis in range(3)
+    )
+
+
+def _repair_missing_face_spans(
+    occupancy: np.ndarray,
+    score: np.ndarray,
+    target_count: int,
+) -> np.ndarray:
+    """Repair platform-sensitive threshold ties at periodic domain faces.
+
+    Trigonometric scores can differ by a few ulps across system math
+    libraries. At coarse resolutions, a tied gyroid voxel may therefore land
+    on the opposite periodic face and leave a load face empty. Add the
+    lowest-score face voxel already adjacent to the connected solid, then
+    remove the least-preferred nonessential voxel to preserve exact density.
+    """
+    repaired = np.asarray(occupancy, dtype=bool).copy()
+    for axis in range(3):
+        for face_index in (0, repaired.shape[axis] - 1):
+            if bool(np.take(repaired, face_index, axis=axis).any()):
+                continue
+            face_shape = np.take(repaired, face_index, axis=axis).shape
+            candidates = []
+            for transverse in np.ndindex(face_shape):
+                remaining = [value for value in range(3) if value != axis]
+                line = []
+                for position in range(repaired.shape[axis]):
+                    index = [0, 0, 0]
+                    index[axis] = position
+                    index[remaining[0]] = int(transverse[0])
+                    index[remaining[1]] = int(transverse[1])
+                    line.append(tuple(index))
+                occupied_positions = [
+                    position
+                    for position, location in enumerate(line)
+                    if repaired[location]
+                ]
+                if not occupied_positions:
+                    continue
+                if face_index == 0:
+                    path = line[:min(occupied_positions)]
+                else:
+                    path = line[max(occupied_positions) + 1:]
+                if not path:
+                    continue
+                candidates.append(
+                    (
+                        len(path),
+                        float(sum(score[location] for location in path)),
+                        int(
+                            np.ravel_multi_index(
+                                path[0], repaired.shape
+                            )
+                        ),
+                        path,
+                    )
+                )
+            if not candidates:
+                raise RuntimeError(
+                    "could not connect a missing voxel-domain face"
+                )
+            best_path = min(candidates, key=lambda item: item[:3])[3]
+            for location in best_path:
+                repaired[location] = True
+
+    excess = int(np.sum(repaired)) - target_count
+    if excess <= 0:
+        return repaired
+    removal_order = np.argsort(score.ravel(), kind="stable")[::-1]
+    for flat_index in removal_order:
+        if excess == 0:
+            break
+        if not repaired.ravel()[flat_index]:
+            continue
+        candidate = repaired.copy()
+        candidate.ravel()[flat_index] = False
+        if not _spans_all_domain_faces(candidate):
+            continue
+        if len(_component_masks(candidate)) != 1:
+            continue
+        repaired = candidate
+        excess -= 1
+    if excess:
+        raise RuntimeError(
+            "could not preserve target density while repairing face spans"
+        )
+    return repaired
 
 
 def _component_masks(occupancy: np.ndarray) -> List[np.ndarray]:

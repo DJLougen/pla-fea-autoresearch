@@ -1,11 +1,15 @@
 from pathlib import Path
 import struct
 
+import numpy as np
 import pytest
 
 from src.calculix import CalculixRunner
 from src.volumetric_infill import (
     VOLUMETRIC_PATTERNS,
+    _component_masks,
+    _repair_missing_face_spans,
+    _spans_all_domain_faces,
     connectivity_components,
     inspect_binary_stl,
     make_voxel_mesh,
@@ -13,6 +17,20 @@ from src.volumetric_infill import (
     render_voxel_compression_deck,
     write_voxel_stl,
 )
+
+
+def test_platform_tie_repair_preserves_density_and_connectivity():
+    occupancy = np.zeros((6, 6, 6), dtype=bool)
+    occupancy[1:5, 1:5, 1:5] = True
+    target_count = int(occupancy.sum())
+    repaired = _repair_missing_face_spans(
+        occupancy,
+        np.ones_like(occupancy, dtype=float),
+        target_count,
+    )
+    assert int(repaired.sum()) == target_count
+    assert _spans_all_domain_faces(repaired)
+    assert len(_component_masks(repaired)) == 1
 
 
 def test_equal_mass_voxel_patterns_are_connected_and_span_all_axes():

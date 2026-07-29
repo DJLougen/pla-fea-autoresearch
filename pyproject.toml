@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pla-fea-autoresearch"
+version = "0.1.0"
+description = "Inverse elastic calibration of anisotropic FDM PLA with CalculiX"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = [
+  "3d-printing",
+  "finite-element-analysis",
+  "infill",
+  "pla",
+  "calculix",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "openpyxl>=3.1",
+  "PyYAML>=6.0",
+  "scipy>=1.10",
+  "scikit-image>=0.24",
+]
+
+[project.urls]
+Homepage = "https://github.com/DJLougen/pla-fea-autoresearch"
+Issues = "https://github.com/DJLougen/pla-fea-autoresearch/issues"
+Repository = "https://github.com/DJLougen/pla-fea-autoresearch"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-cov>=5.0"]
+cma = ["cma>=3.3"]
+solid = ["gmsh>=4.13", "meshio>=5.3"]
+digitization = ["Pillow>=10.0"]
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "integration: requires an installed CalculiX executable",
+]
+addopts = "-ra"

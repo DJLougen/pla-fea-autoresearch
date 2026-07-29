@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "name": "bowtie_fan",
+  "description": "A symmetric load-path fan: a continuous center spine spreads a center bending load through overlapping bow-tie diagonals into continuous supported side rails.",
+  "units": "mm",
+  "domain": {
+    "width_mm": 40.0,
+    "height_mm": 40.0,
+    "depth_mm": 4.0
+  },
+  "relative_density": 0.35,
+  "minimum_printable_strut_width_mm": 0.8,
+  "minimum_segment_length_mm": 0.5,
+  "design_parameters": {
+    "mechanical_hypothesis": "overlapping diagonal fans shorten the out-of-plane load path between the center loading line and supported side rails",
+    "symmetry": "mirror about x=20 mm and y=20 mm"
+  },
+  "segments": [
+    [[0, 0], [0, 10]],
+    [[0, 10], [0, 20]],
+    [[0, 20], [0, 30]],
+    [[0, 30], [0, 40]],
+    [[20, 0], [20, 10]],
+    [[20, 10], [20, 20]],
+    [[20, 20], [20, 30]],
+    [[20, 30], [20, 40]],
+    [[40, 0], [40, 10]],
+    [[40, 10], [40, 20]],
+    [[40, 20], [40, 30]],
+    [[40, 30], [40, 40]],
+
+    [[0, 0], [20, 0]],
+    [[20, 0], [40, 0]],
+    [[0, 40], [20, 40]],
+    [[20, 40], [40, 40]],
+
+    [[20, 10], [0, 0]],
+    [[20, 10], [0, 20]],
+    [[20, 10], [40, 0]],
+    [[20, 10], [40, 20]],
+
+    [[20, 20], [0, 10]],
+    [[20, 20], [0, 30]],
+    [[20, 20], [40, 10]],
+    [[20, 20], [40, 30]],
+
+    [[20, 30], [0, 20]],
+    [[20, 30], [0, 40]],
+    [[20, 30], [40, 20]],
+    [[20, 30], [40, 40]]
+  ]
+}

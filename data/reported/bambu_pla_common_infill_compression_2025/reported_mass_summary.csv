@@ -1,0 +1,10 @@
+material,pattern,nominal_infill_percent,mean_mass_g,mass_standard_deviation_g,replicates,inferred_total_solid_fraction
+"Bambu Lab PLA Basic, purple",grid,10,8.1162,0.0174,3,0.2424193548387097
+"Bambu Lab PLA Basic, purple",grid,20,10.4049,0.0045,3,0.31077956989247313
+"Bambu Lab PLA Basic, purple",grid,30,13.2457,0.0297,3,0.39563022700119477
+"Bambu Lab PLA Basic, purple",gyroid,10,7.7805,0.0904,3,0.2323924731182796
+"Bambu Lab PLA Basic, purple",gyroid,20,10.3857,0.0174,3,0.31020609318996417
+"Bambu Lab PLA Basic, purple",gyroid,30,12.8249,0.015,3,0.38306152927120674
+"Bambu Lab PLA Basic, purple",cubic,10,7.7483,0.0091,3,0.23143070489844686
+"Bambu Lab PLA Basic, purple",cubic,20,10.4397,0.0306,3,0.31181899641577066
+"Bambu Lab PLA Basic, purple",cubic,30,13.0415,0.0291,3,0.38953106332138593

@@ -1,0 +1,59 @@
+{
+  "material": "Bambu PLA Basic black",
+  "table4_measured_quasistatic": {
+    "tensile_strength_MPa": 34.1,
+    "tensile_modulus_MPa": 2600.0,
+    "tensile_breaking_elongation_percent": 8.8,
+    "flexural_strength_MPa": 78.0
+  },
+  "table5_author_ballistic_model": {
+    "density_kg_m3": 1250.0,
+    "E_x_MPa": 2580.0,
+    "E_y_MPa": 2060.0,
+    "E_z_MPa": 2580.0,
+    "nu_xy": 0.33,
+    "nu_xz": 0.33,
+    "nu_yz": 0.3,
+    "G_xy_MPa": 970.0,
+    "G_xz_MPa": 970.0,
+    "G_yz_MPa": 775.0,
+    "ballistic_yield_stress_MPa": 50.0,
+    "plastic_strain_at_60_MPa": 0.05,
+    "damage_initiation_equivalent_plastic_strain": 0.05,
+    "fracture_energy_kJ_m2": 2.5
+  },
+  "print_process": {
+    "printer": "Bambu Lab X1C",
+    "material": "Bambu PLA Basic black",
+    "nozzle_diameter_mm": 0.4,
+    "layer_height_mm": 0.2,
+    "wall_width_inner_mm": 0.45,
+    "wall_width_outer_mm": 0.42,
+    "nozzle_temperature_C": 220,
+    "print_speed_outer_mm_s": 200,
+    "print_speed_inner_mm_s": 300,
+    "bed_temperature_C": 35
+  },
+  "ballistic_test": {
+    "projectile_mass_kg": 0.008,
+    "projectile_diameter_m": 0.009,
+    "mean_velocity_m_s": 355.0,
+    "reported_velocity_range_m_s": [
+      354.0,
+      368.0
+    ],
+    "target_length_mm": 200.0,
+    "target_width_mm": 60.0,
+    "target_height_mm": 60.0,
+    "infill_density_percent": 50.0,
+    "replicates_per_pattern": 3
+  },
+  "critical_interpretation": {
+    "quasistatic_yield_observation_MPa": "approximately 35 with minimal post-yield hardening",
+    "author_ballistic_yield_MPa": 50.0,
+    "strain_rate_law_in_FE_model": null,
+    "rate_effect_status": "50 MPa was rationalized using strain-rate sensitivity, but the paper later states that rate hardening was not included",
+    "damage_status": "author-calibrated/literature-grounded model; not direct fracture-coupon identification",
+    "FE_validation": "homogenized grid target: 184 mm simulation versus 169.2 mm measured mean; internal 50% infill not explicit"
+  }
+}

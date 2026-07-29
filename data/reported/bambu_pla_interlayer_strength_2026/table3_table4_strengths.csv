@@ -1,0 +1,5 @@
+printing_strategy,response,mean_MPa,standard_deviation_MPa,standard_error_MPa,table
+traditional_multi_head_seam,vertical_interlayer_tensile_strength,35.07,2.55,0.74,3
+smlp_continuous_layers,vertical_interlayer_tensile_strength,47.49,1.16,0.33,3
+traditional_multi_head_seam,apparent_tear_strength,13.88,2.98,0.86,4
+smlp_continuous_layers,apparent_tear_strength,14.15,3.17,0.91,4

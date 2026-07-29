@@ -1,0 +1,259 @@
+{
+  "pattern": "graded_hourglass",
+  "control": "triangular",
+  "source_sha256": "5ee6a76e94e99ae530da28174ed06260f4b2686b476885e59fccc926e9c6295f",
+  "material_admission": {
+    "gate_passed": true,
+    "twin_id": "bambu_pla_basic_evidence_twin_v1",
+    "twin_manifest": "./results/bambu_pla_digital_twin/manifest.json",
+    "twin_manifest_sha256": "6779cb0e9ccab14ea99fa5beafb4844e438f9c0c43f70aece54c645cba3f48cc",
+    "request": {
+      "request_id": "custom_graded_hourglass_static_elastic",
+      "analysis_kind": "static_elastic",
+      "temperature_C": 23.0,
+      "frequency_Hz": null,
+      "relative_humidity_percent": 20.0,
+      "conditioning": "as_printed_dry",
+      "nozzle_temperature_C": 220,
+      "directionality": "directional",
+      "material_direction": "mixed",
+      "maximum_strain": null,
+      "duration_s": 1.0
+    },
+    "selection": {
+      "request_id": "custom_graded_hourglass_static_elastic",
+      "status": "sensitivity_only",
+      "model_id": "tds_transverse_elastic_sensitivity_v2",
+      "fidelity": "reported XY/Z modulus plus measured in-plane Poisson and remaining out-of-plane/shear priors",
+      "solver_compatibility": "CalculiX",
+      "canonical_card": "results/bambu_pla_digital_twin/cards/room_tds_transverse.inp",
+      "evidence_files": [
+        "data/reported/bambu_pla_tds_transverse_sensitivity.json",
+        "data/reported/bambu_pla_viscoelastic_wave_2026/provenance.json",
+        "results/static_poisson_propagation/summary.json"
+      ],
+      "reason": "Direction-aware screening is useful, but the six shear/Poisson constants are not all measured.",
+      "limitations": [
+        "E1/E2 and E3 are reported summary values.",
+        "nu12 uses one exact-brand measurement from a separate Bambu-X1C process.",
+        "Out-of-plane Poisson and quasistatic shear values remain priors."
+      ],
+      "service_status": "admitted_with_restrictions"
+    },
+    "properties_file": "./data/reported/bambu_pla_tds_transverse_sensitivity.json",
+    "properties_sha256": "9c82b780d3a0e058f9e076ecfcfa7a6ac270c92c4aabc3408ac1abb37614e4e1",
+    "canonical_profile_sha256": "9c82b780d3a0e058f9e076ecfcfa7a6ac270c92c4aabc3408ac1abb37614e4e1",
+    "canonical_card": "./results/bambu_pla_digital_twin/cards/room_tds_transverse.inp",
+    "canonical_card_sha256": "0d67eaaf3b0c8fab98ac576d4bbfa00c6a609fe9e72f6231c4c5c322dc9ec2a5"
+  },
+  "properties_file": "./data/reported/bambu_pla_tds_transverse_sensitivity.json",
+  "properties_sha256": "9c82b780d3a0e058f9e076ecfcfa7a6ac270c92c4aabc3408ac1abb37614e4e1",
+  "temperature_C": 23.0,
+  "relative_humidity_percent": 20.0,
+  "conditioning": "as_printed_dry",
+  "endpoint_deformation": 0.01,
+  "mesh_size_mm": 0.9,
+  "solid_run_included": true,
+  "successful_beam_cases": 10,
+  "successful_solid_cases": 10,
+  "failure_sensitivity_static_fields": 8,
+  "failure_sensitivity_report": "./results/custom_infill/graded_hourglass/failure_sensitivity/report.md",
+  "balanced_custom_to_control_ratio": 0.6943883508681575,
+  "bending_mesh_convergence": [
+    {
+      "mesh_size_mm": 1.2,
+      "pattern": "graded_hourglass",
+      "status": "ok",
+      "stiffness_N_per_mm": 85.36330492000016,
+      "nodes": 5275,
+      "elements": 5368
+    },
+    {
+      "mesh_size_mm": 0.9,
+      "pattern": "graded_hourglass",
+      "status": "ok",
+      "stiffness_N_per_mm": 82.50954400500004,
+      "nodes": 9570,
+      "elements": 10800
+    },
+    {
+      "mesh_size_mm": 0.7,
+      "pattern": "graded_hourglass",
+      "status": "ok",
+      "stiffness_N_per_mm": 81.55125708000011,
+      "nodes": 14371,
+      "elements": 16776
+    },
+    {
+      "mesh_size_mm": 1.2,
+      "pattern": "triangular",
+      "status": "ok",
+      "stiffness_N_per_mm": 70.13782510949996,
+      "nodes": 4985,
+      "elements": 5320
+    },
+    {
+      "mesh_size_mm": 0.9,
+      "pattern": "triangular",
+      "status": "ok",
+      "stiffness_N_per_mm": 68.8411853075,
+      "nodes": 8658,
+      "elements": 9990
+    },
+    {
+      "mesh_size_mm": 0.7,
+      "pattern": "triangular",
+      "status": "ok",
+      "stiffness_N_per_mm": 67.66950849874995,
+      "nodes": 15358,
+      "elements": 19308
+    }
+  ],
+  "bending_medium_to_fine_change": {
+    "graded_hourglass": 0.011614255496816828,
+    "triangular": 0.017019997600511982
+  },
+  "comparison": [
+    {
+      "fidelity": "beam_B31",
+      "load_case": "tension",
+      "custom_pattern": "graded_hourglass",
+      "control_pattern": "triangular",
+      "custom_status": "ok",
+      "control_status": "ok",
+      "metric": "stiffness_N_per_mm",
+      "custom_value": 1176.3122499999997,
+      "control_value": 1773.6178499999999,
+      "custom_to_control_ratio": 0.6632275661862559
+    },
+    {
+      "fidelity": "beam_B31",
+      "load_case": "shear",
+      "custom_pattern": "graded_hourglass",
+      "control_pattern": "triangular",
+      "custom_status": "ok",
+      "control_status": "ok",
+      "metric": "stiffness_N_per_mm",
+      "custom_value": 423.6610749999999,
+      "control_value": 428.7062275,
+      "custom_to_control_ratio": 0.9882316789998109
+    },
+    {
+      "fidelity": "beam_B31",
+      "load_case": "bending",
+      "custom_pattern": "graded_hourglass",
+      "control_pattern": "triangular",
+      "custom_status": "ok",
+      "control_status": "ok",
+      "metric": "stiffness_N_per_mm",
+      "custom_value": 104.816625,
+      "control_value": 69.95689500000002,
+      "custom_to_control_ratio": 1.498302990720214
+    },
+    {
+      "fidelity": "beam_B31",
+      "load_case": "compression",
+      "custom_pattern": "graded_hourglass",
+      "control_pattern": "triangular",
+      "custom_status": "ok",
+      "control_status": "ok",
+      "metric": "stiffness_N_per_mm",
+      "custom_value": 1161.2012499999998,
+      "control_value": 1746.6371499999998,
+      "custom_to_control_ratio": 0.6648211106697233
+    },
+    {
+      "fidelity": "beam_B31",
+      "load_case": "buckling",
+      "custom_pattern": "graded_hourglass",
+      "control_pattern": "triangular",
+      "custom_status": "ok",
+      "control_status": "ok",
+      "metric": "critical_buckling_load_N",
+      "custom_value": 9589.76,
+      "control_value": 11172.46,
+      "custom_to_control_ratio": 0.8583391661281402
+    },
+    {
+      "fidelity": "solid_C3D6",
+      "load_case": "tension",
+      "custom_pattern": "graded_hourglass",
+      "control_pattern": "triangular",
+      "custom_status": "ok",
+      "control_status": "ok",
+      "metric": "stiffness_N_per_mm",
+      "custom_value": 826.9497319777913,
+      "control_value": 1545.6391125102423,
+      "custom_to_control_ratio": 0.5350212253847267
+    },
+    {
+      "fidelity": "solid_C3D6",
+      "load_case": "shear",
+      "custom_pattern": "graded_hourglass",
+      "control_pattern": "triangular",
+      "custom_status": "ok",
+      "control_status": "ok",
+      "metric": "stiffness_N_per_mm",
+      "custom_value": 304.42714372199845,
+      "control_value": 349.8265512399982,
+      "custom_to_control_ratio": 0.8702230938244206
+    },
+    {
+      "fidelity": "solid_C3D6",
+      "load_case": "bending",
+      "custom_pattern": "graded_hourglass",
+      "control_pattern": "triangular",
+      "custom_status": "ok",
+      "control_status": "ok",
+      "metric": "stiffness_N_per_mm",
+      "custom_value": 82.50954400500004,
+      "control_value": 68.8411853075,
+      "custom_to_control_ratio": 1.1985491481072874
+    },
+    {
+      "fidelity": "solid_C3D6",
+      "load_case": "compression",
+      "custom_pattern": "graded_hourglass",
+      "control_pattern": "triangular",
+      "custom_status": "ok",
+      "control_status": "ok",
+      "metric": "stiffness_N_per_mm",
+      "custom_value": 812.3761638802903,
+      "control_value": 1514.3887657869934,
+      "custom_to_control_ratio": 0.5364383190323766
+    },
+    {
+      "fidelity": "solid_C3D6",
+      "load_case": "buckling",
+      "custom_pattern": "graded_hourglass",
+      "control_pattern": "triangular",
+      "custom_status": "ok",
+      "control_status": "ok",
+      "metric": "critical_buckling_load_N",
+      "custom_value": 76.15555,
+      "control_value": 141.2104,
+      "custom_to_control_ratio": 0.5393055327369656
+    }
+  ],
+  "promotion_decision": {
+    "pattern": "graded_hourglass",
+    "control": "triangular",
+    "material": "Bambu PLA Basic",
+    "material_gate_passed": true,
+    "general_purpose_promotion": false,
+    "specialist_load_cases": [
+      "bending"
+    ],
+    "mesh_convergence_gate_passed": true,
+    "first_test_specimen_count": 6,
+    "next_action": "inspect_slicer_then_print_specialist_validation",
+    "claims_not_supported": [
+      "ultimate load or fracture",
+      "post-collapse absorbed energy",
+      "fatigue life",
+      "creep or environmental lifetime",
+      "behavior outside the admitted material condition"
+    ]
+  },
+  "first_physical_test_plan": "./results/custom_infill/graded_hourglass/first_physical_test_plan.csv"
+}

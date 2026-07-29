@@ -1,0 +1,75 @@
+{
+  "article": {
+    "title": "Bio-inspired perturbated hierarchical mechanical metamaterial for energy absorption",
+    "authors": [
+      "Yinan Zhu",
+      "Zijue Chen",
+      "Yuman Zhu",
+      "Matthieu Gresil",
+      "Yunlong Tang"
+    ],
+    "journal": "International Journal of Mechanical Sciences",
+    "volume": 307,
+    "article_number": "110847",
+    "year": 2025,
+    "doi": "10.1016/j.ijmecsci.2025.110847",
+    "url": "https://doi.org/10.1016/j.ijmecsci.2025.110847",
+    "license": "CC BY 4.0"
+  },
+  "supplement_url": "https://ars.els-cdn.com/content/image/1-s2.0-S0020740325009294-mmc1.pdf",
+  "source_files": {
+    "supplement.pdf": {
+      "sha256": "4f8c2bb9498d1537ada4650ff9a322ef778a0660ce66baa1ddb82ce849362a7d"
+    },
+    "figure-s3-tensile.png": {
+      "sha256": "f49b5fb803762c0757262877196ca58aaf37ac6ef4c225eaf042e39654e4ec16",
+      "pixel_dimensions": [
+        1027,
+        756
+      ]
+    },
+    "figure-s5-compression.png": {
+      "sha256": "25880c6bf1c6e20dae11eadc458b6665aa7f11300efad97f42585eefea2e4d75",
+      "pixel_dimensions": [
+        1063,
+        827
+      ]
+    }
+  },
+  "quality_gate_passed": true,
+  "exact_specimen_replay_allowed": false,
+  "exact_specimen_replay_exclusion_reason": "The random perturbation realization, model files, and post-yield material table are not published.",
+  "digitization_validation": {
+    "quality_gate_passed": true,
+    "tensile_sample_3_points": 724,
+    "tensile_sample_3_origin_slope_MPa": 2164.2292891010547,
+    "tensile_slope_error_vs_reported_2140": 0.011322097710773305,
+    "compression": {
+      "experiment": {
+        "digitized_points": 419.0,
+        "maximum_horizontal_gap_px": 6.0,
+        "maximum_digitized_strain": 0.4899149453219927,
+        "initial_peak_stress_MPa": 1.8227079934747146,
+        "mean_plateau_stress_0p10_to_0p25_MPa": 0.864856332083734,
+        "energy_density_to_0p45_MJ_m3": 0.5811613390429582
+      },
+      "simulation": {
+        "digitized_points": 448.0,
+        "maximum_horizontal_gap_px": 3.0,
+        "maximum_digitized_strain": 0.49538274605103283,
+        "initial_peak_stress_MPa": 1.6806063077759652,
+        "mean_plateau_stress_0p10_to_0p25_MPa": 1.0761026724141038,
+        "energy_density_to_0p45_MJ_m3": 0.5712257531266993
+      }
+    },
+    "simulation_to_experiment_initial_peak_error": -0.07796184918674454,
+    "simulation_to_experiment_energy_to_0p45_error": -0.017096088897827433,
+    "simulation_experiment_normalized_rmse_to_0p45": 0.09876898207835651,
+    "simulation_experiment_pearson_to_0p45": 0.8559986646739804
+  },
+  "limitations": [
+    "Only the visually separable teal tensile trace is digitized; the other two overlap it for much of the plot.",
+    "Figure S5 is an author simulation-versus-experiment validation, not a new CalculiX reproduction.",
+    "The independent material card is appropriate as a sensitivity case, not as proof that every Bambu PLA Basic spool or print orientation is identical."
+  ]
+}

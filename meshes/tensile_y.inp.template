@@ -1,0 +1,39 @@
+** Coarse transverse coupon. Material axes are never inferred from CAD axes.
+*HEADING
+PLA inverse-calibration transverse coupon
+*NODE
+1, 0., 0., 0.
+2, 50., 0., 0.
+3, 50., 10., 0.
+4, 0., 10., 0.
+5, 0., 0., 4.
+6, 50., 0., 4.
+7, 50., 10., 4.
+8, 0., 10., 4.
+*ELEMENT, TYPE=C3D8, ELSET=COUPON
+1, 1,2,3,4,5,6,7,8
+*NSET, NSET=FIXED
+1,4,5,8
+*NSET, NSET=LOAD
+2,3,6,7
+*ORIENTATION, NAME=MAT_ORIENTATION
+{{ORIENTATION}}
+{{MATERIAL_CARD}}
+*SOLID SECTION, ELSET=COUPON, MATERIAL=PLA, ORIENTATION=MAT_ORIENTATION
+*STEP, NLGEOM=NO
+*STATIC, DIRECT
+0.05, 1.0, 1.e-06, 0.1
+*BOUNDARY
+FIXED, 1, 1, 0.
+1, 2, 3, 0.
+4, 3, 3, 0.
+LOAD, 1, 1, {{MAX_DISPLACEMENT}}
+*NODE PRINT, NSET=LOAD
+U
+*NODE PRINT, NSET=FIXED
+RF
+*EL PRINT, ELSET=COUPON
+S,E
+*EL FILE
+S,E
+*END STEP

@@ -1,0 +1,55 @@
+{
+  "profile_id": "bambu_pla_dma_30C_1Hz_print230C_sensitivity_v1",
+  "material": "Bambu PLA Basic",
+  "model_class": "orthotropic_storage_sensitivity",
+  "density_tonnes_mm3": 1.24e-09,
+  "screening_isotropic": {
+    "E_MPa": 3290.0552486187844,
+    "E_standard_deviation_MPa": 0.0,
+    "nu": 0.3459
+  },
+  "screening_engineering_constants": {
+    "E1": 3391.8047882136284,
+    "E2": 3188.305709023941,
+    "E3": 2626.9433380444557,
+    "nu12": 0.3459,
+    "nu13": 0.31,
+    "nu23": 0.31,
+    "G12": 1255.2578735553584,
+    "G13": 994.6678658614929,
+    "G23": 994.6678658614929
+  },
+  "reported_strength_reference": {
+    "overall_tensile_UTS_MPa": 35.0,
+    "overall_tensile_UTS_standard_deviation_MPa": 4.0,
+    "z_upright_tensile_UTS_MPa": 31.0,
+    "z_upright_tensile_UTS_standard_deviation_MPa": 3.0
+  },
+  "dynamic_reference": {
+    "measurement_temperature_C": 30.0,
+    "frequency_Hz": 1.0,
+    "nozzle_temperature_C": 230.0,
+    "Eprime_0deg_MPa": 3391.8047882136284,
+    "Eprime_45deg_MPa": 3330.1104972375692,
+    "Eprime_90deg_MPa": 3188.305709023941,
+    "minimum_DMA_tan_delta_peak_Tg_C": 63.15561694290976,
+    "G12_inference": "plane-stress 45-degree compliance using the separate exact-brand measured in-plane nu12",
+    "out_of_plane_scaling": 1.2752152126429397,
+    "independent_crossplot_rows_passed": 2,
+    "independent_crossplot_rows_total": 3
+  },
+  "admissibility": {
+    "valid": true,
+    "minimum_compliance_eigenvalue": 0.00013085468331393643
+  },
+  "intended_use": "in-phase 30 C, 1 Hz storage-stiffness sensitivity only",
+  "limitations": [
+    "E1/E2/E45 are digitized plotted summary points, not raw sweeps.",
+    "nu12 is a separate exact-brand process measurement; nu13, nu23 and out-of-plane scaling remain priors.",
+    "G12 is inferred from E45 and measured nu12; it is not a direct shear measurement.",
+    "No loss modulus or damping is available.",
+    "Do not use as a service-temperature, creep, Prony, fatigue, resonance, or failure law.",
+    "The minimum DMA Tg is an exclusion boundary, not an allowable service temperature."
+  ],
+  "source_reference": "./data/reported/bambu_pla_published_dma_220C"
+}

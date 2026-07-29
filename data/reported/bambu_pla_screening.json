@@ -1,0 +1,46 @@
+{
+  "profile_id": "bambu_pla_reported_elastic_screening_v1",
+  "intended_use": "Linear-elastic screening of explicit infill geometry before physical coupon tests",
+  "material": "Bambu PLA Basic",
+  "density_tonnes_mm3": 1.24e-09,
+  "screening_isotropic": {
+    "E_MPa": 2079.9,
+    "E_standard_deviation_MPa": 146.2,
+    "nu": 0.33,
+    "nu_provenance": "User-supplied initialization prior; not measured in the cited dataset"
+  },
+  "reported_strength_reference": {
+    "overall_tensile_UTS_MPa": 36.31,
+    "overall_tensile_UTS_standard_deviation_MPa": 6.02,
+    "z_upright_tensile_UTS_MPa": 27.633793333333333,
+    "interpretation": "Reference limit only. The linear-elastic solver does not predict failure."
+  },
+  "tds_orthotropic_initialization_prior": {
+    "E1_MPa": 2580.0,
+    "E2_MPa": 2580.0,
+    "E3_MPa": 2060.0,
+    "nu12": 0.33,
+    "nu13": 0.31,
+    "nu23": 0.31,
+    "G12_MPa": 950.0,
+    "G13_MPa": 780.0,
+    "G23_MPa": 780.0
+  },
+  "sources": [
+    {
+      "type": "article",
+      "doi": "10.1016/j.dib.2026.113015",
+      "dataset_doi": "10.17632/8jxw5533py.2",
+      "note": "Reported overall elastic modulus and tensile strength; associated raw workbook has documented label/count conflicts."
+    },
+    {
+      "type": "project_prior",
+      "note": "Density, Poisson ratios, shear moduli, and TDS-style directional initialization values supplied in the project brief."
+    }
+  ],
+  "limitations": [
+    "The cited print-placement orientations are not a complete verified mapping to local bead, transverse-bead, and build axes.",
+    "Compression strength, fatigue, creep, layer debonding, nonlinear post-buckling, and fracture are not represented.",
+    "Pattern rankings have solid-mesh screening but still require confirmation with printed coupons."
+  ]
+}

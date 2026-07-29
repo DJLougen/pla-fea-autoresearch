@@ -1,0 +1,119 @@
+{
+  "article": "Topology Optimization Design and Performance Comparison of a Land-Air UAV Rotary Arm Integrating Additive Manufacturing Constraints",
+  "journal": "Machines",
+  "year": 2026,
+  "doi": "10.3390/machines14050474",
+  "url": "https://doi.org/10.3390/machines14050474",
+  "license": "CC BY 4.0",
+  "checksums": {
+    "article.xml": "f3a6b6eb3234c04aff17c3c698cf39ef729ddd3e11a3ef1c436954a9bd1dcdea",
+    "paper.pdf": "34faeb65b101758110edee720d8bb75d2b773a793dfe1894da9689aeb4c1de3b",
+    "figure-002.png": "199c3e61690e95a64eac606fe27d390bf0c0de0f0a2571adf6643e1f87fb0009",
+    "figure-004.png": "7c87fafbfb8c203965e6d2b4ce32318aaef7cb6bfd07f68b968b1fb9b1011778",
+    "figure-007.png": "6bb31cd3a590c82ea75b2ebc4a4e0f33c5ba8e63ae4ff988c517415b200727a9"
+  },
+  "material_identity": "Bambu PLA Basic",
+  "print_process": {
+    "printer_reported": "Bambu P2S",
+    "material": "Bambu PLA Basic",
+    "filament_diameter_mm": 1.75,
+    "reported_density_g_cm3": 1.25,
+    "nozzle_diameter_mm": 0.4,
+    "nozzle_temperature_C": 220,
+    "bed_temperature_C": 70,
+    "printing_speed_mm_s": 250,
+    "layer_height_mm": 0.2,
+    "wall_thickness_mm": 4.0,
+    "infill_percent": 100,
+    "top_bottom_thickness_mm": 0.6,
+    "post_print_drying": "8 h at 25 C"
+  },
+  "test_process": {
+    "test": "quasi-static axial loading through two mounting holes",
+    "crosshead_speed_mm_min": 1.0,
+    "maximum_crosshead_displacement_mm": 10.0,
+    "measurement": "machine load plus laser-extensometer displacement",
+    "plotted_specimen_traces_per_geometry": 3
+  },
+  "author_fea": {
+    "solver": "Abaqus/Standard 2022",
+    "density_g_cm3": 1.25,
+    "elastic_modulus_MPa": 3000.0,
+    "poisson_ratio": 0.35,
+    "load_N": 500.0,
+    "mesh_sizes_mm": [
+      3.0,
+      2.0,
+      1.5,
+      0.75
+    ],
+    "reported_final_refinement_displacement_change_below_percent": 5.0
+  },
+  "figure7_pixel_dimensions": [
+    2790,
+    2459
+  ],
+  "figure7_panel_axis_bounds_pixels": {
+    "topology_optimized": {
+      "x_left": 117,
+      "x_right": 1186,
+      "y_top": 24,
+      "y_bottom": 886
+    },
+    "honeycomb": {
+      "x_left": 1684,
+      "x_right": 2754,
+      "y_top": 24,
+      "y_bottom": 886
+    },
+    "central_lightening_hole": {
+      "x_left": 117,
+      "x_right": 1186,
+      "y_top": 1290,
+      "y_bottom": 2152
+    },
+    "solid_baseline": {
+      "x_left": 1684,
+      "x_right": 2754,
+      "y_top": 1290,
+      "y_bottom": 2152
+    }
+  },
+  "physical_specimen_curve_count": 12,
+  "peak_crosschecks": {
+    "topology_optimized": {
+      "trace_count": 3,
+      "digitized_average_peak_MPa": 28.01044083526682,
+      "reported_group_strength_MPa": 27.913,
+      "relative_error": 0.0034908764828869288
+    },
+    "honeycomb": {
+      "trace_count": 3,
+      "digitized_average_peak_MPa": 11.061484918793504,
+      "reported_group_strength_MPa": 11.0844,
+      "relative_error": -0.0020673271630847756
+    },
+    "central_lightening_hole": {
+      "trace_count": 3,
+      "digitized_average_peak_MPa": 19.53016241299304,
+      "reported_group_strength_MPa": 19.489,
+      "relative_error": 0.0021120844062312294
+    },
+    "solid_baseline": {
+      "trace_count": 3,
+      "digitized_average_peak_MPa": 15.759860788863108,
+      "reported_group_strength_MPa": 15.777,
+      "relative_error": -0.0010863415818528344
+    }
+  },
+  "curve_quality_gate_passed": true,
+  "allowed_use": "independent external held-out component response and topology ranking evidence; prohibited from material calibration and model selection",
+  "limitations": [
+    "Machine-exported load/displacement curves are available only on request and are not public.",
+    "The reconstructed CAD/STEP and exact test geometry are not published, so this repository does not claim an exact FEA replay.",
+    "Overlapped colored curve segments are retained as visibility gaps and are not reconstructed.",
+    "The paper's section text omits the numeric specimen count, while Figure 7 visibly labels three specimen traces per geometry.",
+    "The study uses a structural stress-strain reduction; it does not identify local-1/local-2/local-3 material constants.",
+    "The author FEA uses an isotropic E=3000 MPa and nu=0.35 card rather than a measured orthotropic law."
+  ]
+}

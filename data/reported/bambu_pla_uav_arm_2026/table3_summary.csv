@@ -1,0 +1,5 @@
+geometry,elastic_modulus_mean_MPa,elastic_modulus_sd_MPa,tensile_strength_mean_MPa,tensile_strength_sd_MPa,SEA_mean_J_m3,SEA_sd_J_m3
+topology_optimized,2234.254,76.179,27.913,0.387,742.42,29.016
+honeycomb,886.007,16.639,11.0844,0.02,431.725,4.64
+central_lightening_hole,1726.861,178.221,19.489,0.19,620.051,15.261
+solid_baseline,1399.922,47.371,15.777,1.31,530.178,89.352

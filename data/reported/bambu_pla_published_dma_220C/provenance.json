@@ -1,0 +1,18 @@
+{
+  "material": "Bambu Lab PLA Basic",
+  "article": "3D-Printed PLA Mechanical and Viscoelastic Behavior Dependence on the Nozzle Temperature and Printing Orientation",
+  "doi": "10.3390/polym17070913",
+  "url": "https://www.mdpi.com/2073-4360/17/7/913",
+  "license": "CC BY 4.0",
+  "source_checksums_sha256": {
+    "article.xml": "0bb0387b94ce35c56c5f656e3ee7967470f54da1bf19d2b27c5b4d3b5fb51857",
+    "figure-7-dma.png": "0070b0f54c7890ebfe4ed90c995c9481ac9c2e4d010c38322bc21de19ca04342",
+    "figure-9-dma-crossplot.png": "0ee8068c86f312a8f92e855aa13fdf3fc8e9f5bac6d7f30b6f0850244f02ef31"
+  },
+  "quality_gate_passed": true,
+  "dma_rows": 12,
+  "dma_crossplot_rows_passed": 10,
+  "dsc_rows": 4,
+  "allowed_use": "30 C, 1 Hz storage-stiffness sensitivity across the published 210-240 C nozzle-temperature matrix and a conservative glass-transition guardrail",
+  "prohibited_use": "not raw specimens; no loss modulus, damping, Prony series, time-temperature superposition, creep, or service-temperature modulus law may be inferred"
+}

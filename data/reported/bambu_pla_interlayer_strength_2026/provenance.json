@@ -1,0 +1,32 @@
+{
+  "title": "Decomposition-free synchronous multi-layer cooperative 3D printing for enhanced strength and structural integrity",
+  "journal": "The International Journal of Advanced Manufacturing Technology",
+  "year": 2026,
+  "volume": 144,
+  "pages": "7055-7079",
+  "doi": "10.1007/s00170-026-18180-9",
+  "url": "https://doi.org/10.1007/s00170-026-18180-9",
+  "local_pdf": "data/public/springer-smlp-2026/paper.pdf",
+  "sha256": "bc5fda6d4d19c786a62b7e09f14e0bd3ca655bca62d01659db8461a3e165a1e8",
+  "license": "CC BY 4.0",
+  "material": "Bambu PLA Basic",
+  "printer": "modified IDEX based on Tronxy Gemini S",
+  "fixed_process": {
+    "nozzle_temperature_C": 208,
+    "bed_temperature_C": 60,
+    "layer_height_mm": 0.3,
+    "wall_thickness_mm": 0.4,
+    "wall_height_mm": 18,
+    "travel_speed_mm_s": 60
+  },
+  "varied_process": {
+    "print_speed_mm_s": "5 to 60 in 5 mm/s increments",
+    "layer_length_mm": [
+      50,
+      100,
+      150
+    ],
+    "replicates_per_speed_length": 2
+  },
+  "reported_statistics": "Tables 3 and 4 give mean, standard deviation, and standard error across the comparative strategy series"
+}

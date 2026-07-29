@@ -1,0 +1,140 @@
+{
+  "reference_id": "bambu_pla_viscoelastic_wave_2026_v1",
+  "material": "Bambu PLA Basic",
+  "article": {
+    "title": "Predictive wave engineering in polymer phononic materials via viscoelastic-geometric coupling",
+    "doi": "10.1039/D6MH00395H",
+    "publisher_url": "https://pubs.rsc.org/en/content/articlelanding/2026/mh/d6mh00395h",
+    "license": "CC BY 3.0"
+  },
+  "dataset": {
+    "dataset_doi": "10.34894/ACD7BE",
+    "verified_file_count": 11,
+    "files": [
+      {
+        "path": "dma/DMA_100_25000Hz.m",
+        "sha1": "6e982f1f112dea963e438dd2d111ff5ca8e0ddd7",
+        "bytes": 17824
+      },
+      {
+        "path": "dma/DMA_Fig.m",
+        "sha1": "8fa28769ac962867af79f59673ff6f321602dd43",
+        "bytes": 9540
+      },
+      {
+        "path": "dma/pla_bambu_1.csv",
+        "sha1": "d4d3a03591168e0f7515f63a5cca13f058e1c23f",
+        "bytes": 132696
+      },
+      {
+        "path": "dma/pla_bambu_2.csv",
+        "sha1": "b32edaee71a887ffa32ac113f37584ab9d8840a4",
+        "bytes": 132322
+      },
+      {
+        "path": "dma/pla_bambu_3.csv",
+        "sha1": "5dff0b3ca4404635d776d8983258207e6751bc88",
+        "bytes": 132344
+      },
+      {
+        "path": "poisson/PoissonsRatio_PLA.m",
+        "sha1": "f8414707960530d29f4fd679a76f8eb984211d57",
+        "bytes": 7457
+      },
+      {
+        "path": "tensile/Tensile_ISO_PLA_1.csv",
+        "sha1": "cfeb152fa03245cdda6e3ba22f779f0e748ea8e5",
+        "bytes": 4899
+      },
+      {
+        "path": "tensile/Tensile_ISO_PLA_2.csv",
+        "sha1": "4b53357ad9b8693820a2755887927831a11d2c57",
+        "bytes": 4851
+      },
+      {
+        "path": "tensile/Tensile_ISO_PLA_3.csv",
+        "sha1": "e1362263ed98b41aa93720a5596ec102ff6032ec",
+        "bytes": 5476
+      },
+      {
+        "path": "tensile/Tensile_ISO_PLA_4.csv",
+        "sha1": "33fe6a5221e7a886e3a3516f8185fe4e2bdec9a9",
+        "bytes": 4519
+      },
+      {
+        "path": "tensile/Tensile_ISO_PLA_5.csv",
+        "sha1": "7d0fe567a914c982c08b9d8a0617d6736c0ff0d4",
+        "bytes": 4662
+      }
+    ]
+  },
+  "identity_basis": "The article's PLA_B manufacturer reference is the Bambu PLA Basic TDS; samples were printed on a Bambu Lab X1 Carbon.",
+  "print_and_test_scope": {
+    "printer": "Bambu Lab X1 Carbon",
+    "filament_diameter_mm": 1.75,
+    "nozzle_diameter_mm": 0.4,
+    "nozzle_temperature_C": 200.0,
+    "bed_temperature_C": 60.0,
+    "print_speed_mm_s": 40.0,
+    "infill_percent": 100.0,
+    "infill_pattern": "line",
+    "print_direction_deg": 0.0,
+    "ambient_temperature_C": 18.0,
+    "ambient_relative_humidity_percent": 40.0
+  },
+  "reported_static_measurements": {
+    "youngs_modulus_MPa": 1555.0,
+    "poisson_ratio": 0.3459,
+    "printed_density_kg_m3": 1144.0,
+    "inferred_quasistatic_shear_modulus_MPa": 577.6803625826585,
+    "inference_note": "The quasistatic shear value is inferred from measured E and nu under isotropy; it is not a direct shear test."
+  },
+  "reported_dynamic_measurements": {
+    "reference_temperature_C": 18.0,
+    "minimum_reduced_frequency_Hz": 1.0,
+    "maximum_reduced_frequency_Hz": 25000.0,
+    "shear_storage_modulus_MPa": 714.7,
+    "shear_loss_modulus_MPa": 26.6,
+    "loss_factor": 0.03721841332027424,
+    "small_damping_ratio_approximation": 0.01860920666013712,
+    "storage_equivalent_youngs_modulus_MPa": 1923.82946,
+    "dynamic_shear_wave_speed_m_s": 790.403543917765
+  },
+  "raw_reconstruction": {
+    "method": "Reimplemented deposited DMA_Fig.m: convert E'/E'' to G'/G'' with nu=0.3459, apply WLF alpha=-17.44 and beta=51.6 C at 18 C, retain 1-25000 Hz.",
+    "selected_row_count": 85,
+    "manual_outliers_removed": 0,
+    "storage_modulus_MPa": {
+      "mean": 718.3426283028265,
+      "sample_standard_deviation": 83.60995244101026,
+      "median": 666.2435655897007,
+      "minimum": 627.2049540806885,
+      "maximum": 1001.1444738273607
+    },
+    "loss_modulus_MPa": {
+      "mean": 23.513038365017103,
+      "sample_standard_deviation": 77.90050762853913,
+      "median": 10.170473358716102,
+      "minimum": 5.762792968258786,
+      "maximum": 660.0652856318954
+    },
+    "reported_storage_mean_relative_error": 0.005096723524312896,
+    "reported_loss_mean_relative_error": 0.11605118928507141,
+    "caveat": "The deposited plotting script selects outliers interactively, so its exact cleaned mean is not reproducible without the authors' clicks. The paper's representative values are retained separately from the no-click reconstruction."
+  },
+  "quality_gate_passed": true,
+  "admitted_uses": [
+    "small-strain in-phase storage-stiffness screen at 18 C",
+    "1 Hz to 25 kHz reduced-frequency wave screen",
+    "loss-factor damping sensitivity",
+    "in-plane flat Poisson screen",
+    "printed-density wave or modal screen"
+  ],
+  "hard_exclusions": [
+    "quasistatic G12/G13/G23 measurement claim",
+    "out-of-plane Poisson-ratio claim",
+    "large-strain or failure prediction",
+    "creep, fatigue, moisture, aging, or arbitrary-temperature law",
+    "direct use of the 18 C master curve at -80 C or near Tg"
+  ]
+}

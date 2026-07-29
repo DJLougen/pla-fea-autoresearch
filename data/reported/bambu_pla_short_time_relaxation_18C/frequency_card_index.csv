@@ -1,0 +1,7 @@
+frequency_Hz,shear_storage_modulus_MPa,shear_loss_modulus_MPa,loss_factor,card,solver_interpretation
+1.0,683.7258607441155,9.936356755706289,0.014532661884241602,data/reported/bambu_pla_short_time_relaxation_18C/frequency_cards/storage_1Hz.inp,frequency-specific in-phase elastic proxy; damping remains external
+10.0,698.1422663093549,10.13966720819178,0.01452378361475507,data/reported/bambu_pla_short_time_relaxation_18C/frequency_cards/storage_10Hz.inp,frequency-specific in-phase elastic proxy; damping remains external
+100.0,711.2380844746133,8.52919286119989,0.011992036207538501,data/reported/bambu_pla_short_time_relaxation_18C/frequency_cards/storage_100Hz.inp,frequency-specific in-phase elastic proxy; damping remains external
+1000.0,722.4122683045814,7.217967453248984,0.009991479616187477,data/reported/bambu_pla_short_time_relaxation_18C/frequency_cards/storage_1000Hz.inp,frequency-specific in-phase elastic proxy; damping remains external
+10000.0,733.7738922046556,10.958567481041168,0.014934529011540156,data/reported/bambu_pla_short_time_relaxation_18C/frequency_cards/storage_10000Hz.inp,frequency-specific in-phase elastic proxy; damping remains external
+25000.0,743.3656974037732,13.682090986606045,0.018405599067042176,data/reported/bambu_pla_short_time_relaxation_18C/frequency_cards/storage_25000Hz.inp,frequency-specific in-phase elastic proxy; damping remains external

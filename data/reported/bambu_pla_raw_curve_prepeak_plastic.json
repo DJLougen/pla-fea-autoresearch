@@ -1,0 +1,163 @@
+{
+  "profile_id": "bambu_pla_raw_curve_prepeak_plastic_v1",
+  "intended_use": "Exploratory flat-printed in-layer pre-peak tensile sensitivity; not a fracture, compression, or build-Z model",
+  "material": "Bambu PLA Basic",
+  "density_tonnes_mm3": 1.24e-09,
+  "screening_isotropic": {
+    "E_MPa": 2204.1774610119137,
+    "E_standard_deviation_MPa": 207.32291258214624,
+    "E_bootstrap_95pct_lower_MPa": 2154.6687698818573,
+    "E_bootstrap_95pct_upper_MPa": 2311.0384590147614,
+    "nu": 0.33,
+    "nu_provenance": "User-supplied initialization prior; not measured in the cited dataset",
+    "selection_reason": "Isotropic has the lowest BIC; source placement groups do not map completely to local material axes"
+  },
+  "raw_curve_extraction": {
+    "specimens": 22,
+    "strain_window": [
+      0.002,
+      0.006
+    ],
+    "fit": "affine ordinary least squares after exact-row deduplication",
+    "robust_location": "Huber M-estimate, tuning constant 1.345",
+    "bootstrap_seed": 20260728,
+    "mean_modulus_MPa": 2225.4433139427993,
+    "median_modulus_MPa": 2206.014377656391,
+    "minimum_modulus_MPa": 1672.8526135372852,
+    "maximum_modulus_MPa": 2627.4531501155952,
+    "same_label_summary_comparisons": 19,
+    "same_label_modulus_mismatches_gt_5pct": 9
+  },
+  "directional_observations": {
+    "Z_upright_candidate_E3_mean_MPa": 2239.0293558242934,
+    "Z_upright_candidate_E3_standard_deviation_MPa": 41.00866280540693,
+    "interpretation": "Z-upright loading is consistent with the build direction; the other placement groups cannot be uniquely assigned to local bead and in-layer transverse axes from this source."
+  },
+  "reported_strength_reference": {
+    "overall_tensile_UTS_MPa": 36.31,
+    "overall_tensile_UTS_standard_deviation_MPa": 6.02,
+    "z_upright_tensile_UTS_MPa": 27.633793333333333,
+    "interpretation": "Reference limit only. The linear-elastic solver does not predict failure."
+  },
+  "tds_orthotropic_initialization_prior": {
+    "E1_MPa": 2580.0,
+    "E2_MPa": 2580.0,
+    "E3_MPa": 2060.0,
+    "nu12": 0.33,
+    "nu13": 0.31,
+    "nu23": 0.31,
+    "G12_MPa": 950.0,
+    "G13_MPa": 780.0,
+    "G23_MPa": 780.0
+  },
+  "model_comparison": [
+    {
+      "model": "isotropic",
+      "parameters": 1,
+      "rmse_MPa": 202.55623144208502,
+      "loocv_rmse_MPa": 212.20176627266045,
+      "aic": 235.6847715018383,
+      "bic": 236.7758139551966,
+      "group_means_MPa": "{\"all\": 2225.4433139427993}"
+    },
+    {
+      "model": "source_placement",
+      "parameters": 3,
+      "rmse_MPa": 180.88550397559644,
+      "loocv_rmse_MPa": 203.79326482325294,
+      "aic": 234.7060272809647,
+      "bic": 237.97915464103963,
+      "group_means_MPa": "{\"flat\": 2130.405943189436, \"on-edge\": 2326.5117119304814, \"upright\": 2239.0293558242934}"
+    },
+    {
+      "model": "source_axis_and_placement",
+      "parameters": 7,
+      "rmse_MPa": 157.86207614074993,
+      "loocv_rmse_MPa": 238.18248725795627,
+      "aic": 236.7157555030576,
+      "bic": 244.35305267656582,
+      "group_means_MPa": "{\"45Deg-flat\": 2179.356911949126, \"45Deg-on-edge\": 2351.0687718052063, \"X-flat\": 2097.4450474636824, \"X-on-edge\": 2473.862593283857, \"Y-flat\": 2099.4065467794485, \"Y-on-edge\": 2154.6037707023806, \"Z-upright\": 2239.0293558242934}"
+    }
+  ],
+  "sources": [
+    {
+      "type": "article",
+      "doi": "10.1016/j.dib.2026.113015",
+      "dataset_doi": "10.17632/8jxw5533py.2",
+      "note": "Reported overall elastic modulus and tensile strength; associated raw workbook has documented label/count conflicts."
+    },
+    {
+      "type": "project_prior",
+      "note": "Density, Poisson ratios, shear moduli, and TDS-style directional initialization values supplied in the project brief."
+    }
+  ],
+  "limitations": [
+    "The raw workbook has 22 curves while the article claims 21.",
+    "Source placement labels and summary-workbook specimen labels conflict.",
+    "Only Z-upright has a defensible direct build-axis interpretation.",
+    "Poisson ratios and shear moduli remain project priors.",
+    "No compression, flexural, fatigue, creep, fracture, or held-out component measurements are available for this exact material source.",
+    "The J2 flow assumption is not identified by uniaxial tensile data.",
+    "Plastic incompressibility and equal tension/compression yield are unverified for printed PLA.",
+    "Z-upright curves are excluded from the in-layer hardening aggregate.",
+    "The card stops at the last strain with at least 80% non-Z pre-peak coverage.",
+    "No post-peak softening, necking, damage, fracture, rate, temperature, or cyclic behavior is represented."
+  ],
+  "plastic_isotropic": {
+    "model": "J2_von_Mises_piecewise_isotropic_hardening",
+    "source_population": "19 non-Z-upright literal raw tensile curves",
+    "derivation": "zero-shifted pre-peak engineering curves; conditional median with >=80% specimen coverage; 0.2% offset yield; true stress and logarithmic strain conversion",
+    "specimens": 19,
+    "minimum_curve_coverage": 16,
+    "minimum_coverage_fraction": 0.8,
+    "offset_strain": 0.002,
+    "yield_engineering_strain": 0.016902128880603762,
+    "yield_engineering_stress_MPa": 32.84693659972151,
+    "yield_true_stress_MPa": 33.40211975546302,
+    "maximum_supported_engineering_strain": 0.022825,
+    "maximum_supported_true_stress_MPa": 38.69222671953052,
+    "maximum_supported_equivalent_plastic_strain": 0.0026418888524802394,
+    "points": [
+      {
+        "true_stress_MPa": 33.40211975546302,
+        "equivalent_plastic_strain": 0.0
+      },
+      {
+        "true_stress_MPa": 34.44755126333334,
+        "equivalent_plastic_strain": 0.00029354320583113773
+      },
+      {
+        "true_stress_MPa": 35.24638272526322,
+        "equivalent_plastic_strain": 0.0005870864116622755
+      },
+      {
+        "true_stress_MPa": 35.81824256470303,
+        "equivalent_plastic_strain": 0.0008806296174934131
+      },
+      {
+        "true_stress_MPa": 36.30048474503603,
+        "equivalent_plastic_strain": 0.001174172823324551
+      },
+      {
+        "true_stress_MPa": 36.71091825748068,
+        "equivalent_plastic_strain": 0.0014677160291556887
+      },
+      {
+        "true_stress_MPa": 37.07423161001245,
+        "equivalent_plastic_strain": 0.0017612592349868263
+      },
+      {
+        "true_stress_MPa": 37.40230353853013,
+        "equivalent_plastic_strain": 0.0020548024408179643
+      },
+      {
+        "true_stress_MPa": 38.36938225048648,
+        "equivalent_plastic_strain": 0.002348345646649102
+      },
+      {
+        "true_stress_MPa": 38.69222671953052,
+        "equivalent_plastic_strain": 0.0026418888524802394
+      }
+    ]
+  }
+}

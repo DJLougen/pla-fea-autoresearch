@@ -1,0 +1,81 @@
+{
+  "article": "Influence of Infill Pattern on Ballistic Resistance Capabilities of 3D-Printed Polymeric Structures",
+  "journal": "Polymers",
+  "year": 2025,
+  "doi": "10.3390/polym17131854",
+  "url": "https://doi.org/10.3390/polym17131854",
+  "license": "CC BY 4.0",
+  "checksums": {
+    "paper.pdf": "b11de514b617a4bc3f55f32f20b90152d3ca6d1abcb189fb6e09ac72ec376a5e",
+    "article.xml": "2157484fb9dc5a65c93153b8760996dd0a4486e4ef63bb2e0fea79a2fa6c8e5a",
+    "figure-006.jpg": "5d83d786022c347ddef1b6e5d9284e4f10b75d8951ba5665063c6e327abc55dd",
+    "figure-006-highres.png": "6e01f342c1852fa997fb880658dfd47588a2c6acf57aba9092ab02c5db85e931"
+  },
+  "figure6_digitization_asset": {
+    "filename": "figure-006-highres.png",
+    "official_source_url": "https://mdpi-res.com/d_attachment/polymers/polymers-17-01854/article_deploy/html/images/polymers-17-01854-g006.png",
+    "pixel_dimensions": [
+      4262,
+      1579
+    ],
+    "panel_axis_bounds_pixels": {
+      "tensile": {
+        "x_left": 178,
+        "x_right": 2072,
+        "y_top": 43,
+        "y_bottom": 1261,
+        "peak_x_window": [
+          430,
+          700
+        ],
+        "curve_y_window": [
+          760,
+          1050
+        ],
+        "table_strength_MPa": 34.1
+      },
+      "flexural": {
+        "x_left": 2353,
+        "x_right": 4187,
+        "y_top": 71,
+        "y_bottom": 1243,
+        "peak_x_window": [
+          2670,
+          3000
+        ],
+        "curve_y_window": [
+          250,
+          800
+        ],
+        "table_strength_MPa": 78.0
+      }
+    }
+  },
+  "five_tensile_specimens_reported": true,
+  "five_flexural_specimens_reported": true,
+  "separable_colored_curves_per_response": 4,
+  "peak_crosschecks": {
+    "tensile": {
+      "separable_trace_count": 4,
+      "four_trace_average_peak_MPa": 34.36986863711002,
+      "reported_five_specimen_average_strength_MPa": 34.1,
+      "relative_error": 0.007914036278886094
+    },
+    "flexural": {
+      "separable_trace_count": 4,
+      "four_trace_average_peak_MPa": 77.68771331058021,
+      "reported_five_specimen_average_strength_MPa": 78.0,
+      "relative_error": -0.004003675505381943
+    }
+  },
+  "curve_quality_gate_passed": true,
+  "damage_energy_gate_passed": true,
+  "limitations": [
+    "The article reports five specimens per response, but the official high-resolution Figure 6 rendering contains only four independently separable colored traces. A fifth trace may be fully overplotted or absent from the rendering and is not fabricated.",
+    "Machine-exported raw tensile/flexural data are unavailable.",
+    "The 50 MPa ballistic yield exceeds the measured quasi-static strength and is an author modeling choice.",
+    "No explicit strain-rate constitutive law was used.",
+    "Damage initiation and fracture energy were not identified from matched exact-brand fracture coupons.",
+    "The paper's FE validation homogenized the grid target rather than meshing its internal infill."
+  ]
+}

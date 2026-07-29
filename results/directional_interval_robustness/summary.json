@@ -1,0 +1,517 @@
+{
+  "study_id": "bambu_pla_directional_interval_robustness_v1",
+  "material": "Bambu PLA Basic",
+  "status": "bounded_sensitivity_only",
+  "material_sample_count": 44,
+  "beam_solver_case_count": 880,
+  "beam_interval_response_status": "invariant_not_used_for_material_promotion",
+  "coarse_solid_mesh_size_mm": 1.2,
+  "coarse_solid_solver_case_count": 880,
+  "promoted_adversarial_sample_count": 6,
+  "promoted_adversarial_sample_ids": [
+    "axis_G12_low",
+    "axis_G13_low",
+    "canonical",
+    "lhs_06",
+    "lhs_10",
+    "lhs_11"
+  ],
+  "refined_solid_mesh_size_mm": 0.9,
+  "refined_solid_solver_case_count": 120,
+  "all_solver_cases_passed": true,
+  "beam_candidate_summary": [
+    {
+      "pattern": "triangular",
+      "minimum_balanced_ratio": 1.0,
+      "maximum_balanced_ratio": 1.0,
+      "minimum_balanced_sample": "canonical",
+      "best_sample_rank": 1,
+      "worst_sample_rank": 1,
+      "load_envelopes": {
+        "tension": {
+          "minimum_ratio": 1.0,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 1.0,
+          "maximum_sample": "canonical"
+        },
+        "shear": {
+          "minimum_ratio": 1.0,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 1.0,
+          "maximum_sample": "canonical"
+        },
+        "bending": {
+          "minimum_ratio": 1.0,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 1.0,
+          "maximum_sample": "canonical"
+        },
+        "compression": {
+          "minimum_ratio": 1.0,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 1.0,
+          "maximum_sample": "canonical"
+        },
+        "buckling": {
+          "minimum_ratio": 1.0,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 1.0,
+          "maximum_sample": "canonical"
+        }
+      }
+    },
+    {
+      "pattern": "kite_08_08_12_08",
+      "minimum_balanced_ratio": 0.8951832660135473,
+      "maximum_balanced_ratio": 0.8951832660135473,
+      "minimum_balanced_sample": "canonical",
+      "best_sample_rank": 2,
+      "worst_sample_rank": 2,
+      "load_envelopes": {
+        "tension": {
+          "minimum_ratio": 0.6438435991157847,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 0.6438435991157847,
+          "maximum_sample": "canonical"
+        },
+        "shear": {
+          "minimum_ratio": 1.0983517844979285,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 1.0983517844979285,
+          "maximum_sample": "canonical"
+        },
+        "bending": {
+          "minimum_ratio": 1.5975688314925922,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 1.5975688314925922,
+          "maximum_sample": "canonical"
+        },
+        "compression": {
+          "minimum_ratio": 0.6453607150174264,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 0.6453607150174264,
+          "maximum_sample": "canonical"
+        },
+        "buckling": {
+          "minimum_ratio": 0.7884530354102857,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 0.7884530354102857,
+          "maximum_sample": "canonical"
+        }
+      }
+    },
+    {
+      "pattern": "bowtie_fan",
+      "minimum_balanced_ratio": 0.8888602910788456,
+      "maximum_balanced_ratio": 0.8888602910788456,
+      "minimum_balanced_sample": "canonical",
+      "best_sample_rank": 3,
+      "worst_sample_rank": 3,
+      "load_envelopes": {
+        "tension": {
+          "minimum_ratio": 0.7146118032134148,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 0.7146118032134148,
+          "maximum_sample": "canonical"
+        },
+        "shear": {
+          "minimum_ratio": 1.010903206438726,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 1.010903206438726,
+          "maximum_sample": "canonical"
+        },
+        "bending": {
+          "minimum_ratio": 1.571722344166361,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 1.571722344166361,
+          "maximum_sample": "canonical"
+        },
+        "compression": {
+          "minimum_ratio": 0.7156652427781008,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 0.7156652427781008,
+          "maximum_sample": "canonical"
+        },
+        "buckling": {
+          "minimum_ratio": 0.682813364290407,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 0.682813364290407,
+          "maximum_sample": "canonical"
+        }
+      }
+    },
+    {
+      "pattern": "kite_08_08_08_08",
+      "minimum_balanced_ratio": 0.8880477163316803,
+      "maximum_balanced_ratio": 0.8880477163316803,
+      "minimum_balanced_sample": "canonical",
+      "best_sample_rank": 4,
+      "worst_sample_rank": 4,
+      "load_envelopes": {
+        "tension": {
+          "minimum_ratio": 0.6426835408766323,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 0.6426835408766323,
+          "maximum_sample": "canonical"
+        },
+        "shear": {
+          "minimum_ratio": 1.0770794086493645,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 1.0770794086493645,
+          "maximum_sample": "canonical"
+        },
+        "bending": {
+          "minimum_ratio": 1.6288595999007673,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 1.6288595999007673,
+          "maximum_sample": "canonical"
+        },
+        "compression": {
+          "minimum_ratio": 0.6441813057737835,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 0.6441813057737835,
+          "maximum_sample": "canonical"
+        },
+        "buckling": {
+          "minimum_ratio": 0.7604047810419551,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 0.7604047810419551,
+          "maximum_sample": "canonical"
+        }
+      }
+    }
+  ],
+  "coarse_solid_candidate_summary": [
+    {
+      "pattern": "triangular",
+      "minimum_balanced_ratio": 1.0,
+      "maximum_balanced_ratio": 1.0,
+      "minimum_balanced_sample": "canonical",
+      "best_sample_rank": 1,
+      "worst_sample_rank": 1,
+      "load_envelopes": {
+        "tension": {
+          "minimum_ratio": 1.0,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 1.0,
+          "maximum_sample": "canonical"
+        },
+        "shear": {
+          "minimum_ratio": 1.0,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 1.0,
+          "maximum_sample": "canonical"
+        },
+        "bending": {
+          "minimum_ratio": 1.0,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 1.0,
+          "maximum_sample": "canonical"
+        },
+        "compression": {
+          "minimum_ratio": 1.0,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 1.0,
+          "maximum_sample": "canonical"
+        },
+        "buckling": {
+          "minimum_ratio": 1.0,
+          "minimum_sample": "canonical",
+          "maximum_ratio": 1.0,
+          "maximum_sample": "canonical"
+        }
+      }
+    },
+    {
+      "pattern": "bowtie_fan",
+      "minimum_balanced_ratio": 0.767691448692905,
+      "maximum_balanced_ratio": 0.7880913634612787,
+      "minimum_balanced_sample": "lhs_10",
+      "best_sample_rank": 2,
+      "worst_sample_rank": 2,
+      "load_envelopes": {
+        "tension": {
+          "minimum_ratio": 0.6087028663056112,
+          "minimum_sample": "lhs_11",
+          "maximum_ratio": 0.6303592921674794,
+          "maximum_sample": "axis_G12_low"
+        },
+        "shear": {
+          "minimum_ratio": 0.8142564662607568,
+          "minimum_sample": "lhs_10",
+          "maximum_ratio": 0.8967382499133759,
+          "maximum_sample": "axis_G12_low"
+        },
+        "bending": {
+          "minimum_ratio": 1.327175432501284,
+          "minimum_sample": "axis_G12_low",
+          "maximum_ratio": 1.4063420608771133,
+          "maximum_sample": "lhs_10"
+        },
+        "compression": {
+          "minimum_ratio": 0.6097335669504738,
+          "minimum_sample": "lhs_11",
+          "maximum_ratio": 0.6314343986910682,
+          "maximum_sample": "axis_G12_low"
+        },
+        "buckling": {
+          "minimum_ratio": 0.613289485011296,
+          "minimum_sample": "lhs_06",
+          "maximum_ratio": 0.646899777457843,
+          "maximum_sample": "lhs_22"
+        }
+      }
+    },
+    {
+      "pattern": "kite_08_08_08_08",
+      "minimum_balanced_ratio": 0.7240108079019442,
+      "maximum_balanced_ratio": 0.7469191412356475,
+      "minimum_balanced_sample": "lhs_10",
+      "best_sample_rank": 3,
+      "worst_sample_rank": 3,
+      "load_envelopes": {
+        "tension": {
+          "minimum_ratio": 0.5173404486889884,
+          "minimum_sample": "lhs_11",
+          "maximum_ratio": 0.5300463716239727,
+          "maximum_sample": "axis_G12_low"
+        },
+        "shear": {
+          "minimum_ratio": 0.974136729403102,
+          "minimum_sample": "lhs_10",
+          "maximum_ratio": 1.0977197980474445,
+          "maximum_sample": "axis_G12_low"
+        },
+        "bending": {
+          "minimum_ratio": 1.3670797741428864,
+          "minimum_sample": "axis_G12_low",
+          "maximum_ratio": 1.4224285166471464,
+          "maximum_sample": "lhs_11"
+        },
+        "compression": {
+          "minimum_ratio": 0.5189647555697289,
+          "minimum_sample": "lhs_11",
+          "maximum_ratio": 0.531783575269368,
+          "maximum_sample": "axis_G12_low"
+        },
+        "buckling": {
+          "minimum_ratio": 0.5247411989874843,
+          "minimum_sample": "axis_G13_low",
+          "maximum_ratio": 0.5573654983395998,
+          "maximum_sample": "lhs_22"
+        }
+      }
+    },
+    {
+      "pattern": "kite_08_08_12_08",
+      "minimum_balanced_ratio": 0.7140219476237847,
+      "maximum_balanced_ratio": 0.7355539769947341,
+      "minimum_balanced_sample": "lhs_10",
+      "best_sample_rank": 4,
+      "worst_sample_rank": 4,
+      "load_envelopes": {
+        "tension": {
+          "minimum_ratio": 0.514069809485543,
+          "minimum_sample": "lhs_11",
+          "maximum_ratio": 0.5275724860329076,
+          "maximum_sample": "axis_G12_low"
+        },
+        "shear": {
+          "minimum_ratio": 0.9385523705836549,
+          "minimum_sample": "lhs_10",
+          "maximum_ratio": 1.0588719291670248,
+          "maximum_sample": "axis_G12_low"
+        },
+        "bending": {
+          "minimum_ratio": 1.3302594469288145,
+          "minimum_sample": "axis_G12_low",
+          "maximum_ratio": 1.396183106078636,
+          "maximum_sample": "lhs_11"
+        },
+        "compression": {
+          "minimum_ratio": 0.5155313152611656,
+          "minimum_sample": "lhs_11",
+          "maximum_ratio": 0.5291913305980442,
+          "maximum_sample": "axis_G12_low"
+        },
+        "buckling": {
+          "minimum_ratio": 0.5232547867963296,
+          "minimum_sample": "axis_G13_low",
+          "maximum_ratio": 0.5544341659599086,
+          "maximum_sample": "lhs_22"
+        }
+      }
+    }
+  ],
+  "refined_solid_candidate_summary": [
+    {
+      "pattern": "triangular",
+      "minimum_balanced_ratio": 1.0,
+      "maximum_balanced_ratio": 1.0,
+      "minimum_balanced_sample": "axis_G12_low",
+      "best_sample_rank": 1,
+      "worst_sample_rank": 1,
+      "load_envelopes": {
+        "tension": {
+          "minimum_ratio": 1.0,
+          "minimum_sample": "axis_G12_low",
+          "maximum_ratio": 1.0,
+          "maximum_sample": "axis_G12_low"
+        },
+        "shear": {
+          "minimum_ratio": 1.0,
+          "minimum_sample": "axis_G12_low",
+          "maximum_ratio": 1.0,
+          "maximum_sample": "axis_G12_low"
+        },
+        "bending": {
+          "minimum_ratio": 1.0,
+          "minimum_sample": "axis_G12_low",
+          "maximum_ratio": 1.0,
+          "maximum_sample": "axis_G12_low"
+        },
+        "compression": {
+          "minimum_ratio": 1.0,
+          "minimum_sample": "axis_G12_low",
+          "maximum_ratio": 1.0,
+          "maximum_sample": "axis_G12_low"
+        },
+        "buckling": {
+          "minimum_ratio": 1.0,
+          "minimum_sample": "axis_G12_low",
+          "maximum_ratio": 1.0,
+          "maximum_sample": "axis_G12_low"
+        }
+      }
+    },
+    {
+      "pattern": "bowtie_fan",
+      "minimum_balanced_ratio": 0.7688912011881278,
+      "maximum_balanced_ratio": 0.7906428802689675,
+      "minimum_balanced_sample": "lhs_10",
+      "best_sample_rank": 2,
+      "worst_sample_rank": 2,
+      "load_envelopes": {
+        "tension": {
+          "minimum_ratio": 0.6077371651141108,
+          "minimum_sample": "lhs_11",
+          "maximum_ratio": 0.6292323170788122,
+          "maximum_sample": "axis_G12_low"
+        },
+        "shear": {
+          "minimum_ratio": 0.8202447131718408,
+          "minimum_sample": "lhs_10",
+          "maximum_ratio": 0.9097109350575652,
+          "maximum_sample": "axis_G12_low"
+        },
+        "bending": {
+          "minimum_ratio": 1.3330326070216925,
+          "minimum_sample": "axis_G12_low",
+          "maximum_ratio": 1.411971594808198,
+          "maximum_sample": "lhs_10"
+        },
+        "compression": {
+          "minimum_ratio": 0.6091362703002773,
+          "minimum_sample": "lhs_11",
+          "maximum_ratio": 0.6309399157479327,
+          "maximum_sample": "axis_G12_low"
+        },
+        "buckling": {
+          "minimum_ratio": 0.6138545538999306,
+          "minimum_sample": "lhs_06",
+          "maximum_ratio": 0.6417392632675154,
+          "maximum_sample": "axis_G12_low"
+        }
+      }
+    },
+    {
+      "pattern": "kite_08_08_08_08",
+      "minimum_balanced_ratio": 0.7121088426246636,
+      "maximum_balanced_ratio": 0.7362698286055243,
+      "minimum_balanced_sample": "lhs_10",
+      "best_sample_rank": 3,
+      "worst_sample_rank": 3,
+      "load_envelopes": {
+        "tension": {
+          "minimum_ratio": 0.5070199991522667,
+          "minimum_sample": "lhs_11",
+          "maximum_ratio": 0.5214163737420185,
+          "maximum_sample": "axis_G12_low"
+        },
+        "shear": {
+          "minimum_ratio": 0.959649619908582,
+          "minimum_sample": "lhs_10",
+          "maximum_ratio": 1.0864003720931876,
+          "maximum_sample": "axis_G12_low"
+        },
+        "bending": {
+          "minimum_ratio": 1.3520624429823784,
+          "minimum_sample": "axis_G12_low",
+          "maximum_ratio": 1.4083776638723922,
+          "maximum_sample": "lhs_11"
+        },
+        "compression": {
+          "minimum_ratio": 0.5086907690386501,
+          "minimum_sample": "lhs_11",
+          "maximum_ratio": 0.5232353318826245,
+          "maximum_sample": "axis_G12_low"
+        },
+        "buckling": {
+          "minimum_ratio": 0.5148320348496273,
+          "minimum_sample": "axis_G13_low",
+          "maximum_ratio": 0.5399041152027637,
+          "maximum_sample": "axis_G12_low"
+        }
+      }
+    },
+    {
+      "pattern": "kite_08_08_12_08",
+      "minimum_balanced_ratio": 0.703378752791962,
+      "maximum_balanced_ratio": 0.7250686961746673,
+      "minimum_balanced_sample": "lhs_10",
+      "best_sample_rank": 4,
+      "worst_sample_rank": 4,
+      "load_envelopes": {
+        "tension": {
+          "minimum_ratio": 0.5062775524415792,
+          "minimum_sample": "lhs_11",
+          "maximum_ratio": 0.5210869000035009,
+          "maximum_sample": "axis_G12_low"
+        },
+        "shear": {
+          "minimum_ratio": 0.9193170187956811,
+          "minimum_sample": "lhs_10",
+          "maximum_ratio": 1.0393235515717048,
+          "maximum_sample": "axis_G12_low"
+        },
+        "bending": {
+          "minimum_ratio": 1.311707855627649,
+          "minimum_sample": "axis_G12_low",
+          "maximum_ratio": 1.3814963901022488,
+          "maximum_sample": "lhs_10"
+        },
+        "compression": {
+          "minimum_ratio": 0.5077273951828463,
+          "minimum_sample": "lhs_11",
+          "maximum_ratio": 0.5227138089276503,
+          "maximum_sample": "axis_G12_low"
+        },
+        "buckling": {
+          "minimum_ratio": 0.5153076640870317,
+          "minimum_sample": "axis_G13_low",
+          "maximum_ratio": 0.5396768147681389,
+          "maximum_sample": "axis_G12_low"
+        }
+      }
+    }
+  ],
+  "maximum_absolute_refinement_ratio_change": 0.020791775716436534,
+  "ratio_refinement_gate_passed": true,
+  "interpretation": "deterministic non-probabilistic interval robustness screen",
+  "claims_not_supported": [
+    "probability that one pattern wins",
+    "confidence interval on any unmeasured constant",
+    "global mathematical worst case between sampled cards",
+    "failure load, fracture, fatigue, creep, or environmental life"
+  ]
+}

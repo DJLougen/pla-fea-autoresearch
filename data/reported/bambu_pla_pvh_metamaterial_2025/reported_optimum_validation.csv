@@ -1,0 +1,7 @@
+design,metric,fea_value,experimental_mean,experimental_standard_deviation,absolute_relative_error
+high_level_optimum,elastic_modulus_MPa,68.94,76.9,5.32,0.10351105331599486
+high_level_optimum,compressive_strength_MPa,1.52,1.55,0.34,0.01935483870967747
+medium_level_optimum,elastic_modulus_MPa,21.59,23.19,0.24,0.0689952565761105
+medium_level_optimum,compressive_strength_MPa,0.62,0.66,0.01,0.06060606060606066
+baseline_honeycomb,elastic_modulus_MPa,25.15,28.28,0.88,0.11067892503536081
+baseline_honeycomb,compressive_strength_MPa,0.75,0.9,0.03,0.16666666666666674

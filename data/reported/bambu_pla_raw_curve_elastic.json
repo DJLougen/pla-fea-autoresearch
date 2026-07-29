@@ -1,0 +1,101 @@
+{
+  "profile_id": "bambu_pla_raw_curve_elastic_v1",
+  "intended_use": "Exploratory linear-elastic screening from literal Bambu PLA Basic raw tensile curves; not a failure model",
+  "material": "Bambu PLA Basic",
+  "density_tonnes_mm3": 1.24e-09,
+  "screening_isotropic": {
+    "E_MPa": 2204.1774610119137,
+    "E_standard_deviation_MPa": 207.32291258214624,
+    "E_bootstrap_95pct_lower_MPa": 2154.6687698818573,
+    "E_bootstrap_95pct_upper_MPa": 2311.0384590147614,
+    "nu": 0.33,
+    "nu_provenance": "User-supplied initialization prior; not measured in the cited dataset",
+    "selection_reason": "Isotropic has the lowest BIC; source placement groups do not map completely to local material axes"
+  },
+  "raw_curve_extraction": {
+    "specimens": 22,
+    "strain_window": [
+      0.002,
+      0.006
+    ],
+    "fit": "affine ordinary least squares after exact-row deduplication",
+    "robust_location": "Huber M-estimate, tuning constant 1.345",
+    "bootstrap_seed": 20260728,
+    "mean_modulus_MPa": 2225.4433139427993,
+    "median_modulus_MPa": 2206.014377656391,
+    "minimum_modulus_MPa": 1672.8526135372852,
+    "maximum_modulus_MPa": 2627.4531501155952,
+    "same_label_summary_comparisons": 19,
+    "same_label_modulus_mismatches_gt_5pct": 9
+  },
+  "directional_observations": {
+    "Z_upright_candidate_E3_mean_MPa": 2239.0293558242934,
+    "Z_upright_candidate_E3_standard_deviation_MPa": 41.00866280540693,
+    "interpretation": "Z-upright loading is consistent with the build direction; the other placement groups cannot be uniquely assigned to local bead and in-layer transverse axes from this source."
+  },
+  "reported_strength_reference": {
+    "overall_tensile_UTS_MPa": 36.31,
+    "overall_tensile_UTS_standard_deviation_MPa": 6.02,
+    "z_upright_tensile_UTS_MPa": 27.633793333333333,
+    "interpretation": "Reference limit only. The linear-elastic solver does not predict failure."
+  },
+  "tds_orthotropic_initialization_prior": {
+    "E1_MPa": 2580.0,
+    "E2_MPa": 2580.0,
+    "E3_MPa": 2060.0,
+    "nu12": 0.33,
+    "nu13": 0.31,
+    "nu23": 0.31,
+    "G12_MPa": 950.0,
+    "G13_MPa": 780.0,
+    "G23_MPa": 780.0
+  },
+  "model_comparison": [
+    {
+      "model": "isotropic",
+      "parameters": 1,
+      "rmse_MPa": 202.55623144208502,
+      "loocv_rmse_MPa": 212.20176627266045,
+      "aic": 235.6847715018383,
+      "bic": 236.7758139551966,
+      "group_means_MPa": "{\"all\": 2225.4433139427993}"
+    },
+    {
+      "model": "source_placement",
+      "parameters": 3,
+      "rmse_MPa": 180.88550397559644,
+      "loocv_rmse_MPa": 203.79326482325294,
+      "aic": 234.7060272809647,
+      "bic": 237.97915464103963,
+      "group_means_MPa": "{\"flat\": 2130.405943189436, \"on-edge\": 2326.5117119304814, \"upright\": 2239.0293558242934}"
+    },
+    {
+      "model": "source_axis_and_placement",
+      "parameters": 7,
+      "rmse_MPa": 157.86207614074993,
+      "loocv_rmse_MPa": 238.18248725795627,
+      "aic": 236.7157555030576,
+      "bic": 244.35305267656582,
+      "group_means_MPa": "{\"45Deg-flat\": 2179.356911949126, \"45Deg-on-edge\": 2351.0687718052063, \"X-flat\": 2097.4450474636824, \"X-on-edge\": 2473.862593283857, \"Y-flat\": 2099.4065467794485, \"Y-on-edge\": 2154.6037707023806, \"Z-upright\": 2239.0293558242934}"
+    }
+  ],
+  "sources": [
+    {
+      "type": "article",
+      "doi": "10.1016/j.dib.2026.113015",
+      "dataset_doi": "10.17632/8jxw5533py.2",
+      "note": "Reported overall elastic modulus and tensile strength; associated raw workbook has documented label/count conflicts."
+    },
+    {
+      "type": "project_prior",
+      "note": "Density, Poisson ratios, shear moduli, and TDS-style directional initialization values supplied in the project brief."
+    }
+  ],
+  "limitations": [
+    "The raw workbook has 22 curves while the article claims 21.",
+    "Source placement labels and summary-workbook specimen labels conflict.",
+    "Only Z-upright has a defensible direct build-axis interpretation.",
+    "Poisson ratios and shear moduli remain project priors.",
+    "No compression, flexural, fatigue, creep, fracture, or held-out component measurements are available for this exact material source."
+  ]
+}

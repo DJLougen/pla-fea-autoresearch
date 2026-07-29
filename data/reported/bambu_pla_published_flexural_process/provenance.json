@@ -1,0 +1,18 @@
+{
+  "material": "Bambu Lab PLA Basic",
+  "doi": "10.3390/polym17070913",
+  "url": "https://www.mdpi.com/2073-4360/17/7/913",
+  "license": "CC BY 4.0",
+  "source_checksums_sha256": {
+    "article.xml": "0bb0387b94ce35c56c5f656e3ee7967470f54da1bf19d2b27c5b4d3b5fb51857",
+    "figure-5-flexural-process.png": "3dab27c024242015686756ca3dc1f101fb16ff080353b5b83294f7c882a7d095",
+    "figure-6-flexural-crossplot.png": "fcc4a7b133b16f08179fc2f46c37d89f210f26bb525ba49b4d4c30d5fca06677"
+  },
+  "rows": 12,
+  "quality_rows_passed": 12,
+  "quality_gate_passed": true,
+  "authoritative_values": "exact XML Table 3 means and CV percentages",
+  "figure_use": "Figures 5 and 6 are independent layout crosschecks only",
+  "allowed_use": "as-printed nozzle-temperature/raster-orientation flexural modulus and strength sensitivity for the published process",
+  "prohibited_use": "not raw curves; not tensile, compression, shear, fracture, service-temperature, fatigue, or creep calibration"
+}

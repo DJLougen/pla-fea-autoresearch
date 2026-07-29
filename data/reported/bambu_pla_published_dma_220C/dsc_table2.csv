@@ -1,0 +1,5 @@
+nozzle_temperature_C,DSC_Tg_C,melting_temperature_C,cold_crystallization_enthalpy_J_g,melting_enthalpy_J_g,degree_crystallinity_percent
+210.0,56.93,156.86,27.19,34.15,7.48
+220.0,55.3,156.09,23.03,35.42,13.32
+230.0,56.89,156.37,23.11,37.82,15.82
+240.0,56.22,156.56,23.93,40.1,17.39

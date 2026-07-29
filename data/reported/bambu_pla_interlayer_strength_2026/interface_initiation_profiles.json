@@ -1,0 +1,31 @@
+{
+  "material": "Bambu PLA Basic",
+  "intended_use": "process-conditioned local-3 opening/apparent-tear initiation sensitivity for thin printed walls",
+  "profiles": {
+    "traditional_multi_head_seam": {
+      "normal_tensile_mean_MPa": 35.07,
+      "normal_tensile_standard_deviation_MPa": 2.55,
+      "normal_tensile_lower_1sd_MPa": 32.52,
+      "apparent_tear_mean_MPa": 13.88,
+      "apparent_tear_standard_deviation_MPa": 2.98,
+      "apparent_tear_lower_1sd_MPa": 10.9
+    },
+    "smlp_continuous_layers": {
+      "normal_tensile_mean_MPa": 47.49,
+      "normal_tensile_standard_deviation_MPa": 1.16,
+      "normal_tensile_lower_1sd_MPa": 46.330000000000005,
+      "apparent_tear_mean_MPa": 14.15,
+      "apparent_tear_standard_deviation_MPa": 3.17,
+      "apparent_tear_lower_1sd_MPa": 10.98
+    }
+  },
+  "interaction": "sqrt((max(sigma3,0)/N)^2 + (sqrt(tau23^2+tau31^2)/T)^2)",
+  "limitations": [
+    "tear test is not a pure-mode shear coupon",
+    "no traction-separation displacement or fracture energy",
+    "no damage evolution, crack growth, or post-peak response",
+    "modified dual-extruder printer, not a Bambu printer",
+    "0.4 mm single-bead thin wall at 208 C and 0.3 mm layers",
+    "strength changes materially with speed and deposition history"
+  ]
+}

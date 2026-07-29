@@ -1,0 +1,6 @@
+requirement,available,evidence
+large-cell and hierarchical topology,True,main Figure 1 and Supplement A5-A6
+design-variable bounds and validation point,True,Supplement A5-A7
+random perturbation direction vector or seed,False,not published
+"exact CAD, mesh, or Abaqus input file",False,data available only on author request
+post-yield PLA hardening curve,False,only E and 0.2%-offset yield are stated

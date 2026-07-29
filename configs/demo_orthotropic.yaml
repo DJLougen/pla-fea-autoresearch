@@ -1,0 +1,30 @@
+experiment:
+  id: demo-orthotropic
+  parent_id: demo-transverse-isotropic
+  hypothesis: Synthetic full orthotropy improves validation enough to justify its parameters.
+  model_class: orthotropic
+  fit_poisson: true
+  mesh_level: analytic
+  regularization_strength: 0.03
+  curve_weighting: equal_test
+solver:
+  mode: mock
+  executable: null
+  timeout_seconds: 10
+  keep_successful_runs: false
+data:
+  processed_dir: data/processed
+  manifest: data/processed/manifest.csv
+optimization:
+  algorithm: differential_evolution
+  seed: 42
+  budget: 150
+  workers: 1
+  popsize: 4
+  polish: false
+  early_stopping_patience: 120
+  early_stopping_tolerance: 1.0e-6
+output:
+  runs_dir: runs
+  results_file: results/results.tsv
+  best_dir: results/best

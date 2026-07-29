@@ -1,0 +1,31 @@
+experiment:
+  id: transverse-isotropic
+  parent_id: isotropic-baseline
+  hypothesis: Build-direction anisotropy materially improves held-out prediction.
+  model_class: transverse_isotropic
+  fit_poisson: true
+  mesh_level: coarse
+  regularization_strength: 0.02
+  curve_weighting: equal_test
+solver:
+  mode: calculix
+  executable: ccx
+  timeout_seconds: 120
+  keep_successful_runs: false
+data:
+  processed_dir: data/processed
+  manifest: data/processed/manifest.csv
+optimization:
+  algorithm: differential_evolution
+  seed: 42
+  budget: 300
+  workers: 1
+  popsize: 5
+  polish: false
+  early_stopping_patience: 80
+  early_stopping_tolerance: 1.0e-6
+output:
+  runs_dir: runs
+  results_file: results/results.tsv
+  best_dir: results/best
+

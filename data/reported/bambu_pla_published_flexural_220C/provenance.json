@@ -1,0 +1,32 @@
+{
+  "material": "Bambu Lab PLA Basic",
+  "article": "3D-Printed PLA Mechanical and Viscoelastic Behavior Dependence on the Nozzle Temperature and Printing Orientation",
+  "doi": "10.3390/polym17070913",
+  "url": "https://www.mdpi.com/2073-4360/17/7/913",
+  "license": "CC BY 4.0",
+  "source_checksums_sha256": {
+    "article.xml": "0bb0387b94ce35c56c5f656e3ee7967470f54da1bf19d2b27c5b4d3b5fb51857",
+    "figure-4-flexural-curves.tif": "b370646dba18476f287ffd3ddfe0cf1143c8b6964fda29ab89834615774a00f6"
+  },
+  "figure": 4,
+  "table": 3,
+  "plot_axis_calibration": {
+    "left_px": 208,
+    "right_px": 1577,
+    "top_px": 34,
+    "bottom_px": 1145,
+    "strain_range": [
+      0.0,
+      0.07
+    ],
+    "stress_range_MPa": [
+      0.0,
+      75.0
+    ],
+    "one_pixel_strain": 5.113221329437546e-05,
+    "one_pixel_stress_MPa": 0.0675067506750675
+  },
+  "quality_gate_passed": true,
+  "allowed_use": "qualitative external curve-shape and initial-flexural-response validation at the published process condition",
+  "prohibited_use": "not raw specimen data; do not place in calibration/model-selection partitions or infer a fracture law"
+}

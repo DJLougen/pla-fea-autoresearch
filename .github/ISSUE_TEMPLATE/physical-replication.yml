@@ -1,0 +1,39 @@
+name: Physical replication
+description: Share a planned or completed physical test of a simulated result
+title: "[Replication] "
+labels:
+  - replication
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Contradictory and negative results are welcome. Do not upload private
+        information or data you do not have permission to publish.
+  - type: input
+    id: target
+    attributes:
+      label: Simulation or claim tested
+      description: Link the study, pattern, commit, or result being tested.
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: Material, printer, slicer, specimen, and fixture setup
+      description: Include material lot, conditioning, print settings, dimensions, mass, and instruments.
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Raw data and provenance
+      description: Link the specimen-level CSVs, license, calibration information, and unmodified machine exports.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Result and deviations
+      description: Report all specimens, exclusions, failure modes, and deviations from the plan.
+    validations:
+      required: true

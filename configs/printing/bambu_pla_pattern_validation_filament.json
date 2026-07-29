@@ -1,0 +1,55 @@
+{
+  "type": "filament",
+  "name": "Bambu PLA Basic Pattern Validation @BBL X1C",
+  "from": "User",
+  "inherits": "Bambu PLA Basic @BBL X1C",
+  "instantiation": "true",
+  "filament_type": [
+    "PLA",
+    "PLA"
+  ],
+  "filament_vendor": [
+    "Bambu Lab",
+    "Bambu Lab"
+  ],
+  "filament_density": [
+    "1.24",
+    "1.24"
+  ],
+  "filament_diameter": [
+    "1.75",
+    "1.75"
+  ],
+  "filament_flow_ratio": [
+    "0.98",
+    "0.98"
+  ],
+  "filament_max_volumetric_speed": [
+    "12",
+    "12"
+  ],
+  "nozzle_temperature": [
+    "220",
+    "220"
+  ],
+  "nozzle_temperature_initial_layer": [
+    "220",
+    "220"
+  ],
+  "textured_plate_temp": [
+    "55",
+    "55"
+  ],
+  "textured_plate_temp_initial_layer": [
+    "55",
+    "55"
+  ],
+  "hot_plate_temp": [
+    "55",
+    "55"
+  ],
+  "hot_plate_temp_initial_layer": [
+    "55",
+    "55"
+  ]
+}

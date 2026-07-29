@@ -1,0 +1,23 @@
+{
+  "title": "Adaptive Infill Method Based on Cross-Section Features and Transition-Layer Design",
+  "source_url": "https://assets-eu.researchsquare.com/files/rs-7965413/v1_covered_bb4415c2-c01c-4970-b519-47d879b8a37a.pdf",
+  "local_pdf": "data/public/adaptive-infill-rs-7965413/paper.pdf",
+  "sha256": "175ae8476430b3f9b7a074660095da6d717adf2fc02589a44399b4eabb28fcc0",
+  "status": "Research Square preprint; not peer reviewed",
+  "material": "Bambu Lab PLA Basic",
+  "printer": "Bambu Lab P1S",
+  "process": {
+    "nozzle_temperature_C": 220,
+    "chamber_temperature_C": 45,
+    "nozzle_diameter_mm": 0.4,
+    "print_speed_mm_min": 1200,
+    "filament_diameter_mm": 1.75
+  },
+  "quality_limits": [
+    "one specimen per parameter configuration",
+    "no raw numeric curves or G-code",
+    "exact internal geometry and full specimen dimensions unavailable",
+    "compression Figure 8 label/text inconsistency retained",
+    "reported modulus and Poisson ratio are assumed, not measured"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "material": "Bambu PLA Basic",
+  "article": "Influence of Print Speed on the Mechanical Performance of 3D-Printed Bio-Polymer Polylactic Acid",
+  "journal": "Materials",
+  "year": 2025,
+  "doi": "10.3390/ma18081765",
+  "url": "https://doi.org/10.3390/ma18081765",
+  "license": "CC BY 4.0",
+  "checksums": {
+    "paper.pdf": "3fccb901c1caeaacd502fb004a71ddbf80dd485dac1a6b8c522b89684cfdb3cd",
+    "article.xml": "62683e8467fce628ce7d0232575f0600b42eacfc4131b93c35ab827eb32549bd",
+    "figure-6-tensile-strength.jpg": "5a05e0e2813e3c2483b3768248243a14a139e45f97c2b1d3144ed76813147a72",
+    "figure-7-tensile-anova.jpg": "8dbb3e1c735302eba3de5e5a2fbfbd60c94ab45db611130efe0856ef99aeb212",
+    "figure-8-stress-strain.jpg": "40f52fcfaa387fa5326a80e175d4f55f82d82aae8ab6baeddc22e83428406762",
+    "figure-9-modulus.jpg": "4bc7e50ed4e52d3c0b9e94e5aa5214c1b40d5ecbef69b7afb6a706563368ea62",
+    "figure-10-modulus-anova.jpg": "2a31471657a590098d2140df547bbf080b1b3f26bf8e509718fc1745c6072886",
+    "figure-11-flexural.jpg": "a5de51e74ed1a3c31716e467f1fed2777f8d7e75a6b50c21e00e72c52211d975",
+    "figure-12-impact.jpg": "af1d626df56776e0b5a596822cbc73d4c184e5d04b00ee67c584d62317da08f8",
+    "figure-13-impact-anova.jpg": "fed977b602d88a805b965b5553e84949118df81aa111262b3ef67486d4eaea6d"
+  },
+  "printer": "Bambu Lab A1 mini",
+  "sample_groups": 8,
+  "replicates_per_group": 5,
+  "quality_gate_passed": true,
+  "fixed_process": {
+    "nozzle_temperature_C": 220,
+    "bed_temperature_C": 65,
+    "layer_height_mm": 0.2,
+    "infill_density_percent": 100,
+    "infill_pattern": "rectilinear",
+    "wall_loops": 2,
+    "top_shell_layers": 4,
+    "bottom_shell_layers": 4,
+    "tensile_standard": "ISO 527-2"
+  },
+  "varied_process": {
+    "nominal_print_speed_mm_s": [
+      30,
+      500
+    ],
+    "build_plate_axis": [
+      "X",
+      "Y"
+    ],
+    "ironing": [
+      false,
+      true
+    ]
+  },
+  "evidence_classes": {
+    "process_group_means_and_standard_deviations": "Figure 6/9/12 plotted mean and mean +/- one SD",
+    "postpeak": "Figure 8 representative colored curves, rescaled by <=2% to the corresponding measured group mean",
+    "prepeak": "cubic reconstruction constrained by plotted mean modulus, mean strength, and digitized peak strain",
+    "fracture_drop": "assumed zero-stress drop one image pixel after the visible curve endpoint"
+  },
+  "limitations": [
+    "The five raw tensile curves for each group are not available.",
+    "Figure 8 is representative/aggregated and is not identified as a raw individual-specimen trace.",
+    "The reconstructed pre-peak branch is not a measured plastic law.",
+    "The terminal zero-stress point is a numerical fracture assumption, not a measured traction-separation law.",
+    "Apparent tensile energy density is not fracture energy.",
+    "X/Y are build-plate axes; the layer path remains oriented the same way relative to the specimen.",
+    "The process profiles are for solid rectilinear tensile coupons on an A1 mini and are not universal constants for sparse infill."
+  ]
+}

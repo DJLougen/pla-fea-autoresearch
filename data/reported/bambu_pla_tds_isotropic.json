@@ -1,0 +1,60 @@
+{
+  "material": "Bambu PLA Basic",
+  "density_tonnes_mm3": 1.24e-09,
+  "screening_isotropic": {
+    "E_MPa": 2580.0,
+    "E_standard_deviation_MPa": 220.0,
+    "nu": 0.3459,
+    "nu_provenance": "Exact-brand Bambu-X1C in-plane flat measurement at 18 C; separate process from the TDS summary"
+  },
+  "reported_strength_reference": {
+    "overall_tensile_UTS_MPa": 35.0,
+    "overall_tensile_UTS_standard_deviation_MPa": 4.0,
+    "z_upright_tensile_UTS_MPa": 31.0,
+    "z_upright_tensile_UTS_standard_deviation_MPa": 3.0
+  },
+  "reported_flexural_reference": {
+    "XY_modulus_MPa": 2750.0,
+    "XY_modulus_standard_deviation_MPa": 160.0,
+    "Z_modulus_MPa": 2370.0,
+    "Z_modulus_standard_deviation_MPa": 150.0,
+    "XY_strength_MPa": 76.0,
+    "XY_strength_standard_deviation_MPa": 5.0,
+    "Z_strength_MPa": 59.0,
+    "Z_strength_standard_deviation_MPa": 6.0
+  },
+  "reported_thermal_reference": {
+    "glass_transition_C": 60.0,
+    "melting_temperature_C": 160.0,
+    "vicat_softening_temperature_C": 57.0,
+    "heat_deflection_temperature_C_at_0_45_MPa": 57.0,
+    "heat_deflection_temperature_C_at_1_8_MPa": 54.0
+  },
+  "source": {
+    "title": "Bambu PLA Basic Technical Data Sheet V3.0",
+    "url": "https://manuals.plus/m/3e29a29bc0a01fb36a156bc22f81655976678d017876dcea051f6250cb7892e2",
+    "accessed": "2026-07-28"
+  },
+  "supplemental_in_plane_poisson_evidence": {
+    "reference_id": "bambu_pla_viscoelastic_wave_2026_v1",
+    "reference_path": "./data/reported/bambu_pla_viscoelastic_wave_2026/provenance.json",
+    "article_doi": "10.1039/D6MH00395H",
+    "value": 0.3459,
+    "measurement": "direct in-plane flat Poisson screen",
+    "printer": "Bambu Lab X1 Carbon",
+    "nozzle_temperature_C": 200.0,
+    "ambient_temperature_C": 18.0,
+    "ambient_relative_humidity_percent": 40.0,
+    "process_transfer_restriction": "exact-brand process-conditioned value; used as a bounded room-temperature in-plane sensitivity, not a universal out-of-plane or environmental law"
+  },
+  "limitations": [
+    "TDS values are summary means and standard deviations, not raw curves.",
+    "The TDS does not report Poisson ratios or shear moduli; nu12 comes from a separate exact-brand Bambu-X1C process.",
+    "Out-of-plane Poisson ratios and all directly measured quasistatic shear moduli remain unavailable.",
+    "No temperature-dependent constitutive curve is provided.",
+    "Strength references do not define a damage or fracture law."
+  ],
+  "profile_id": "bambu_pla_tds_isotropic_v2",
+  "intended_use": "Isotropic TDS-mean elastic sensitivity; not a calibrated failure or temperature model",
+  "model_class": "isotropic"
+}

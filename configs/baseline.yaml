@@ -1,0 +1,31 @@
+experiment:
+  id: isotropic-baseline
+  parent_id: null
+  hypothesis: An isotropic elastic law is sufficient.
+  model_class: isotropic
+  fit_poisson: true
+  mesh_level: coarse
+  regularization_strength: 0.01
+  curve_weighting: equal_test
+solver:
+  mode: calculix
+  executable: ccx
+  timeout_seconds: 120
+  keep_successful_runs: false
+data:
+  processed_dir: data/processed
+  manifest: data/processed/manifest.csv
+optimization:
+  algorithm: differential_evolution
+  seed: 42
+  budget: 200
+  workers: 1
+  popsize: 5
+  polish: false
+  early_stopping_patience: 60
+  early_stopping_tolerance: 1.0e-6
+output:
+  runs_dir: runs
+  results_file: results/results.tsv
+  best_dir: results/best
+

@@ -1,0 +1,50 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+build/
+dist/
+*.egg-info/
+
+# Solver workspaces can exceed 10 GB and are reproducible.
+runs/**
+!runs/.gitkeep
+
+# Generated studies stay local. Keep only the small frozen fixtures required
+# by the public tests and physical-validation handoff.
+results/**
+!results/
+!results/.gitkeep
+!results/custom_infill/
+!results/custom_infill/graded_hourglass/
+!results/custom_infill/graded_hourglass/first_physical_test_plan.csv
+!results/custom_infill/graded_hourglass/study.json
+!results/directional_interval_robustness/
+!results/directional_interval_robustness/summary.json
+
+# Processed calibration data may contain local paths and unpublished
+# measurements. Rebuild it from data/raw.
+data/processed/**
+!data/processed/.gitkeep
+
+# Public source snapshots include papers, workbooks, images, CAD, and solver
+# decks. Do not redistribute those binaries here. The two explicitly CC BY
+# curve collections, manifests, and README files are safe and useful to clone.
+data/public/**
+!data/public/
+!data/public/mendeley-8jxw5533py-v2/
+!data/public/mendeley-8jxw5533py-v2/README.md
+!data/public/mendeley-8jxw5533py-v2/manifest.csv
+!data/public/mendeley-8jxw5533py-v2/curves/
+!data/public/mendeley-8jxw5533py-v2/curves/*.csv
+!data/public/zenodo-16935914/
+!data/public/zenodo-16935914/README.md
+!data/public/zenodo-16935914/manifest.csv
+!data/public/zenodo-16935914/curves/
+!data/public/zenodo-16935914/curves/*.csv
+
+# Local renderings and research scratch material.
+outputs/
+tmp/
+00000.log

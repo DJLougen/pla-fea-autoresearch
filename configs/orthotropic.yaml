@@ -1,0 +1,31 @@
+experiment:
+  id: orthotropic
+  parent_id: transverse-isotropic
+  hypothesis: Independent in-plane and shear constants improve validation enough to justify complexity.
+  model_class: orthotropic
+  fit_poisson: true
+  mesh_level: coarse
+  regularization_strength: 0.03
+  curve_weighting: equal_test
+solver:
+  mode: calculix
+  executable: ccx
+  timeout_seconds: 120
+  keep_successful_runs: false
+data:
+  processed_dir: data/processed
+  manifest: data/processed/manifest.csv
+optimization:
+  algorithm: differential_evolution
+  seed: 42
+  budget: 450
+  workers: 1
+  popsize: 5
+  polish: false
+  early_stopping_patience: 100
+  early_stopping_tolerance: 1.0e-6
+output:
+  runs_dir: runs
+  results_file: results/results.tsv
+  best_dir: results/best
+

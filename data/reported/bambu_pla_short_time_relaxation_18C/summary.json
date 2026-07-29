@@ -1,0 +1,49 @@
+{
+  "model_id": "bambu_pla_18C_short_time_maxwell_sensitivity_v1",
+  "material": "Bambu PLA Basic",
+  "reference_temperature_C": 18.0,
+  "reference_relative_humidity_percent": 40.0,
+  "conditioning": "ambient_lab_18C_40RH",
+  "source_curve": "data/reported/bambu_pla_viscoelastic_wave_2026/dma_master_curve_18C.csv",
+  "raw_row_count": 85,
+  "inlier_row_count": 83,
+  "outlier_row_count": 2,
+  "outlier_rule": "absolute log-loss-factor deviation greater than 6 robust MAD",
+  "candidate_term_counts": [
+    3,
+    5,
+    7,
+    9
+  ],
+  "cross_validation_folds": 5,
+  "best_score_term_count": 9,
+  "selected_term_count": 5,
+  "selection_rule": "smallest model within one standard error of the best five-fold score",
+  "mean_equilibrium_shear_modulus_MPa": 675.0052984324612,
+  "instantaneous_mean_shear_modulus_MPa": 756.2350296040227,
+  "minimum_supported_time_s": 6.366197723675814e-06,
+  "maximum_supported_time_s": 0.15915494309189535,
+  "minimum_supported_frequency_Hz": 1.0,
+  "maximum_supported_frequency_Hz": 25000.0,
+  "final_storage_normalized_rmse": 0.018825350332639317,
+  "final_loss_normalized_rmse": 0.47141292912499455,
+  "storage_fit_gate_passed": true,
+  "loss_fit_gate_passed": false,
+  "positive_spectrum_gate_passed": true,
+  "overall_status": "storage_and_short_time_relaxation_sensitivity_only",
+  "calculix_support": "frequency-specific in-phase elastic cards only; CalculiX has no native linear generalized-Maxwell material card in the verified manual",
+  "admitted_uses": [
+    "small-strain frequency-dependent storage sensitivity at 18 C",
+    "small-strain shear-relaxation sensitivity only between 6.3662e-06 and 0.159155 s",
+    "frequency-specific equivalent elastic CalculiX screens"
+  ],
+  "hard_exclusions": [
+    "time-domain CalculiX Prony material claim",
+    "creep beyond the fitted sub-second window",
+    "constant-load creep compliance",
+    "fatigue or cyclic-damage prediction",
+    "large-strain, plasticity, damage, or fracture",
+    "arbitrary temperature, humidity, or print-process transfer",
+    "precision loss-modulus prediction because its fit gate failed"
+  ]
+}

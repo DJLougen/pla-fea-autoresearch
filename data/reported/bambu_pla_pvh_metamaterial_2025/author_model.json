@@ -1,0 +1,54 @@
+{
+  "material": "Bambu Lab PLA Basic",
+  "printer": "Bambu Lab X1 Carbon",
+  "material_card": {
+    "youngs_modulus_MPa": 2140.0,
+    "yield_stress_MPa": 36.0,
+    "yield_definition": "0.2% offset",
+    "poisson_ratio": 0.35,
+    "density_g_cm3": 1.2,
+    "constitutive_interpretation": "elastic-plastic author card; post-yield table is not published"
+  },
+  "tensile_test": {
+    "standard": "ASTM D638-14",
+    "replicates": 3
+  },
+  "printing": {
+    "nozzle_diameter_mm": 0.2,
+    "nozzle_temperature_C": 220,
+    "flow_ratio": 0.98,
+    "validation_design_wall_thickness_mm": 0.4,
+    "measured_mean_wall_thickness_mm": 0.41
+  },
+  "geometry": {
+    "class": "perturbated vertex-based hierarchical honeycomb",
+    "large_hexagon_side_length_mm": 3.0,
+    "rve_cells_x": 15,
+    "rve_cells_y": 15,
+    "relative_density": 0.2,
+    "baseline_wall_thickness_mm": 0.5,
+    "vertex_hexagon_side_length_range_mm": [
+      0.0,
+      1.0
+    ],
+    "perturbation_magnitude_range_mm": [
+      0.0,
+      0.5
+    ],
+    "validation_vertex_hexagon_side_length_mm": 1.0,
+    "validation_perturbation_magnitude_mm": 0.5
+  },
+  "finite_element_model": {
+    "software": "Abaqus Dynamic/Explicit",
+    "element": "S4R shell",
+    "selected_element_size_mm": 0.5,
+    "contact_normal": "hard",
+    "contact_friction_coefficient": 0.2,
+    "loading_velocity_m_s": 0.6,
+    "quasistatic_gate": "kinetic energy below 5% of internal energy"
+  },
+  "source_conflicts": [
+    "The main article reports 5 mm/min experimental compression; Supplement A7 reports 2 mm/min.",
+    "The main author card uses 1.2 g/cm3; Supplement A7 uses 1.25 g/cm3 in the steady-shock calculation."
+  ]
+}

@@ -1,0 +1,7 @@
+property,value,units,measurement_or_derivation
+youngs_modulus,1555.0,MPa,measured
+poisson_ratio,0.3459,dimensionless,measured
+printed_density,1144.0,kg/m3,measured
+shear_storage_modulus,714.7,MPa,reported DMA representative
+shear_loss_modulus,26.6,MPa,reported DMA representative
+loss_factor,0.03721841332027424,dimensionless,G_double_prime/G_prime

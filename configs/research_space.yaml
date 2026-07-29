@@ -1,0 +1,7 @@
+# This is the only file an automated research agent may edit.
+# Fixed evaluation, partitions, penalties, units, logging, and timeouts live in src/.
+hypotheses:
+  - config: configs/demo_isotropic.yaml
+  - config: configs/demo_transverse_isotropic.yaml
+  - config: configs/demo_orthotropic.yaml
+

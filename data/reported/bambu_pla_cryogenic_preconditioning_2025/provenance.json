@@ -1,0 +1,174 @@
+{
+  "reference_id": "bambu_pla_basic_cryo_recovery_summary_v1",
+  "material": "Bambu Lab PLA Basic",
+  "source": {
+    "filename": "paper.pdf",
+    "sha256": "556b9382b385d5e1e5b7a4a768d1e3c246f50e5e6f9544b1cc5268c85dd74e2e",
+    "pages": 22,
+    "doi": "10.3390/jmmp9110365",
+    "article_url": "https://doi.org/10.3390/jmmp9110365",
+    "pdf_url": "https://mdpi-res.com/d_attachment/jmmp/jmmp-09-00365/article_deploy/jmmp-09-00365-v2.pdf"
+  },
+  "publication": {
+    "title": "Effects of Printing Angle, Infill Density and Cryogenic Pre-Treatment on the Tensile and Flexural Properties of FFF-Printed PLA",
+    "journal": "Journal of Manufacturing and Materials Processing",
+    "year": 2025,
+    "volume": 9,
+    "issue": 11,
+    "article": 365
+  },
+  "printing": {
+    "printer": "Bambu Lab P1S",
+    "slicer": "Bambu Studio 2.2.2.56",
+    "nozzle_temperature_C": 240,
+    "bed_temperature_C": 55,
+    "nozzle_diameter_mm": 0.4,
+    "layer_height_mm": 0.2,
+    "infill_pattern": "cubic",
+    "infill_percent": [
+      20,
+      40,
+      60,
+      80
+    ],
+    "raster_angle_deg": [
+      0,
+      30,
+      60,
+      90
+    ],
+    "perimeter_contours": 2,
+    "filament_drying": "20 C for 24 h before printing"
+  },
+  "conditioning": {
+    "as_printed": "tested without additional treatment",
+    "cryogenic_pre_treatment": "sealed after printing; -80 C for 24 h; warmed at laboratory temperature for 24 h before mechanical testing",
+    "mechanical_test_environment": "23 +/- 2 C, 50 +/- 5% RH",
+    "critical_interpretation": "room-temperature response after freeze/recovery; not mechanical response while at -80 C"
+  },
+  "testing": {
+    "tension": "ASTM D638 Type I, 5 mm/min",
+    "flexure": "ASTM D790, 64 mm span, 2 mm/min",
+    "specimens_per_configuration": 5,
+    "total_specimens": 320,
+    "as_printed_specimens": 160,
+    "cryogenic_pre_treated_specimens": 160
+  },
+  "extraction": {
+    "figure_labeled_means": 160,
+    "paired_conditioning_effects": 80,
+    "raw_specimen_curves_available": false,
+    "numeric_dispersion_available": false,
+    "error_bar_statistic_defined": false,
+    "data_availability_statement": "original contributions are included in the article; further inquiries may be directed to the corresponding author"
+  },
+  "known_internal_inconsistencies": [
+    {
+      "location": "Section 3.1.3 versus Figure 8",
+      "issue": "prose reports the as-printed tensile-modulus minimum as 998.97 MPa, while Figure 8 labels 971.54 MPa at 90/20",
+      "resolution": "retain the printed figure label and flag it"
+    },
+    {
+      "location": "Section 3.6.2 versus Figures 13 and 15",
+      "issue": "the sentence assigns 58.89 MPa to the cryogenic series and 51.39 MPa to an unspecified/as-printed series, opposite the charts and the stated decrease",
+      "resolution": "retain Figure 13 as-printed 58.89 MPa and Figure 15 cryogenic 51.39 MPa"
+    },
+    {
+      "location": "Section 3.3.3 blanket comparison",
+      "issue": "prose says all monitored cryogenic values are lower, but two tensile-modulus cells and one yield cell increase",
+      "resolution": "retain every chart label and report increased/decreased cell counts instead of the blanket statement"
+    }
+  ],
+  "effect_summary": [
+    {
+      "metric": "yield_strength",
+      "configuration_count": 16,
+      "ratio_min": 0.7810709838107098,
+      "ratio_median": 0.9116688518289894,
+      "ratio_mean": 0.9133577380128997,
+      "ratio_max": 1.0473699505957572,
+      "percent_change_min": -21.892901618929017,
+      "percent_change_median": -8.833114817101062,
+      "percent_change_max": 4.7369950595757215,
+      "configurations_decreased": 15,
+      "configurations_unchanged": 0,
+      "configurations_increased": 1
+    },
+    {
+      "metric": "tensile_strength",
+      "configuration_count": 16,
+      "ratio_min": 0.8733401430030645,
+      "ratio_median": 0.9138896790662026,
+      "ratio_mean": 0.9093320008604874,
+      "ratio_max": 0.9467140319715808,
+      "percent_change_min": -12.66598569969355,
+      "percent_change_median": -8.611032093379745,
+      "percent_change_max": -5.328596802841923,
+      "configurations_decreased": 16,
+      "configurations_unchanged": 0,
+      "configurations_increased": 0
+    },
+    {
+      "metric": "tensile_elastic_modulus",
+      "configuration_count": 16,
+      "ratio_min": 0.6495111012062289,
+      "ratio_median": 0.8116707577225595,
+      "ratio_mean": 0.8222454162227153,
+      "ratio_max": 1.034605969508267,
+      "percent_change_min": -35.04888987937711,
+      "percent_change_median": -18.832924227744044,
+      "percent_change_max": 3.4605969508267,
+      "configurations_decreased": 14,
+      "configurations_unchanged": 0,
+      "configurations_increased": 2
+    },
+    {
+      "metric": "flexural_modulus",
+      "configuration_count": 16,
+      "ratio_min": 0.8309056526627825,
+      "ratio_median": 0.9530120046038951,
+      "ratio_mean": 0.9393436684909444,
+      "ratio_max": 0.9718939272687451,
+      "percent_change_min": -16.909434733721753,
+      "percent_change_median": -4.698799539610487,
+      "percent_change_max": -2.810607273125487,
+      "configurations_decreased": 16,
+      "configurations_unchanged": 0,
+      "configurations_increased": 0
+    },
+    {
+      "metric": "flexural_strength",
+      "configuration_count": 16,
+      "ratio_min": 0.8220355928814237,
+      "ratio_median": 0.871281996998892,
+      "ratio_mean": 0.8656883320807282,
+      "ratio_max": 0.906256128652677,
+      "percent_change_min": -17.79644071185763,
+      "percent_change_median": -12.871800300110802,
+      "percent_change_max": -9.374387134732299,
+      "configurations_decreased": 16,
+      "configurations_unchanged": 0,
+      "configurations_increased": 0
+    }
+  ],
+  "quality_gate_passed": true,
+  "allowed_use": [
+    "exact published cell lookup for cubic-infill summary means",
+    "bounded freeze/recovery sensitivity over the published 20-80% infill and 0-90 degree matrix",
+    "adversarial ranking screen using the observed correction factor range, with explicit topology-transfer caveat"
+  ],
+  "prohibited_use": [
+    "raw-curve or specimen-variance calibration",
+    "service behavior while the part is at -80 C",
+    "general temperature-dependent constitutive interpolation",
+    "creep, fatigue, moisture, aging, fracture, or damage calibration",
+    "replacement of missing shear moduli or Poisson ratios",
+    "unqualified transfer from cubic infill to a novel topology"
+  ],
+  "flexural_modulus_ratio_range": {
+    "ratio_min": 0.8309056526627825,
+    "ratio_median": 0.9530120046038951,
+    "ratio_mean": 0.9393436684909444,
+    "ratio_max": 0.9718939272687451
+  }
+}

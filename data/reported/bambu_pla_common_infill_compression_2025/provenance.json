@@ -1,0 +1,87 @@
+{
+  "material": "Bambu Lab PLA Basic, purple",
+  "article": "Compressive Performance of Common Infill Patterns for Fused Filament Fabrication",
+  "authors": [
+    "Kyle J. Woody",
+    "Ian Zhang",
+    "Javid Hamidov",
+    "Matthew Hong",
+    "Hayden K. Taylor"
+  ],
+  "publication_status": "TechRxiv preprint; not peer reviewed at source capture",
+  "license": "CC BY 4.0",
+  "source_capture_date": "2026-07-28",
+  "techrxiv_doi": "10.36227/techrxiv.173609864.46510948/v1",
+  "researchgate_doi": "10.13140/RG.2.2.12377.43360",
+  "article_url": "https://doi.org/10.36227/techrxiv.173609864.46510948/v1",
+  "pdf_url": "https://d197for5662m48.cloudfront.net/documents/publicationstatus/239460/preprint_pdf/4e2859e168e0d386f200523c71a35d0b.pdf",
+  "source_figure": {
+    "filename": "figure-4-density-comparison.png",
+    "sha256": "16d6946d17660321dfc322b4489eb7c64537f9e9b0881764679201fabb64756f",
+    "shape": [
+      292,
+      850,
+      3
+    ],
+    "figure_number": 4,
+    "acquisition_note": "ResearchGate public figure asset; the publisher PDF host was unavailable in the local environment"
+  },
+  "experimental_grain": {
+    "specimen": "30 x 30 x 30 mm compression cube",
+    "patterns": [
+      "grid",
+      "gyroid",
+      "cubic"
+    ],
+    "nominal_infill_percent": [
+      10,
+      20,
+      30
+    ],
+    "wall_thickness_mm": 0.42,
+    "replicates_per_condition": 3,
+    "physical_tests": 27,
+    "compression_endpoint_strain": 0.75,
+    "strain_rate_per_s": 0.005,
+    "printer": "Bambu Lab X1 Carbon"
+  },
+  "plot_axis_calibration": {
+    "panel_boxes_px": {
+      "10": [
+        57,
+        268
+      ],
+      "20": [
+        335,
+        546
+      ],
+      "30": [
+        613,
+        824
+      ]
+    },
+    "top_px": 34,
+    "bottom_px": 245,
+    "strain_range": [
+      0.0,
+      0.75
+    ],
+    "stress_range_Pa": [
+      0.0,
+      42500.0
+    ],
+    "stress_axis_note": "The published figure explicitly labels Pa and displays a x10^4 multiplier. Literal values are retained. A separate x1000 sensitivity is provided because all nine adjusted curve peaks reproduce the paper's independently stated MPa yield strengths within 4%."
+  },
+  "curve_grain": "nine aggregate plotted responses with visible standard-error bands; not 27 raw specimen curves",
+  "internal_unit_consistency": {
+    "status": "conflict",
+    "literal_curve_units": "Pa with x10^4 plot multiplier",
+    "independent_text_units": "yield strength in MPa",
+    "sensitivity_factor": 1000.0,
+    "maximum_adjusted_peak_to_yield_relative_error": 0.030590262817751013,
+    "interpretation": "The figure is likely off by a factor of 1000 in its stress unit label or upstream conversion, but the importer does not choose between the conflicting publication statements."
+  },
+  "quality_gate_passed": true,
+  "allowed_use": "external topology-ranking and qualitative curve-shape validation for matched compression screens",
+  "prohibited_use": "not calibration data, not raw replicates, and not sufficient to identify failure, creep, fatigue, moisture, or rate laws"
+}

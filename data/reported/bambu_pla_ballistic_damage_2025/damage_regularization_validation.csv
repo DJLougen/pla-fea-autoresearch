@@ -1,0 +1,4 @@
+characteristic_length_mm,integrated_softening_energy_N_mm,target_fracture_energy_N_mm,relative_error,full_failure_total_strain,passes_energy_gate
+0.5,2.4999999999999996,2.5,-2.220446049250313e-16,0.23992248062015503,True
+1.0,2.4999999999999996,2.5,-2.220446049250313e-16,0.15658914728682172,True
+2.0,2.5,2.5,0.0,0.11492248062015505,True

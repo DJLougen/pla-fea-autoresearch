@@ -1,0 +1,30 @@
+{
+  "type": "process",
+  "name": "0.20mm Bambu PLA Pattern Validation @BBL X1C",
+  "from": "User",
+  "inherits": "0.20mm Standard @BBL X1C",
+  "instantiation": "true",
+  "compatible_printers": [
+    "Bambu Lab X1 Carbon 0.4 nozzle"
+  ],
+  "layer_height": "0.2",
+  "wall_loops": "3",
+  "sparse_infill_density": "100%",
+  "sparse_infill_pattern": "rectilinear",
+  "top_shell_layers": "5",
+  "bottom_shell_layers": "5",
+  "top_shell_thickness": "1",
+  "bottom_shell_thickness": "1",
+  "enable_support": "0",
+  "brim_type": "no_brim",
+  "curr_bed_type": "Textured PEI Plate",
+  "initial_layer_speed": "30",
+  "initial_layer_infill_speed": "30",
+  "outer_wall_speed": "50",
+  "inner_wall_speed": "50",
+  "sparse_infill_speed": "50",
+  "internal_solid_infill_speed": "50",
+  "top_surface_speed": "50",
+  "gap_infill_speed": "50",
+  "bridge_speed": "30"
+}

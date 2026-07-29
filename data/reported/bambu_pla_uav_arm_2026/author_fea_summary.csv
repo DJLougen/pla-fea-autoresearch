@@ -1,0 +1,5 @@
+geometry,author_peak_von_mises_at_500N_MPa,solver,density_g_cm3,elastic_modulus_MPa,poisson_ratio,load_N,mesh_sizes_mm,reported_final_refinement_displacement_change_below_percent
+topology_optimized,5.539,Abaqus/Standard 2022,1.25,3000.0,0.35,500.0,"[3.0, 2.0, 1.5, 0.75]",5.0
+honeycomb,2.611,Abaqus/Standard 2022,1.25,3000.0,0.35,500.0,"[3.0, 2.0, 1.5, 0.75]",5.0
+central_lightening_hole,1.997,Abaqus/Standard 2022,1.25,3000.0,0.35,500.0,"[3.0, 2.0, 1.5, 0.75]",5.0
+solid_baseline,1.865,Abaqus/Standard 2022,1.25,3000.0,0.35,500.0,"[3.0, 2.0, 1.5, 0.75]",5.0

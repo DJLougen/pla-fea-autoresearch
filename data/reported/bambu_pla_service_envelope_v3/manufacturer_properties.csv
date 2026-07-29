@@ -1,0 +1,9 @@
+property,value,units,test_method,interpretation,uncertainty
+density,1.24,g/cm3,ISO 1183,material density,
+glass_transition_temperature,60.0,degC,"DSC, 10 degC/min","transition marker, not allowable service temperature",
+vicat_softening_temperature,57.0,degC,ISO 306 / GB/T 1633,softening guardrail,
+heat_deflection_temperature_1p8MPa,54.0,degC,ISO 75 at 1.8 MPa,lowest manufacturer structural-temperature guardrail,
+heat_deflection_temperature_0p45MPa,57.0,degC,ISO 75 at 0.45 MPa,load-dependent deflection threshold,
+saturated_water_absorption_25C_55RH,0.43,percent,"25 degC, 55% RH",mass uptake only; no mechanical-property correction is published,
+youngs_modulus_XY,2580.0,MPa,ISO 527 / GB/T 1040,annealed and dried manufacturer specimen,220.0
+youngs_modulus_Z,2060.0,MPa,ISO 527 / GB/T 1040,annealed and dried manufacturer specimen,170.0
